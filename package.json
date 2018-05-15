@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lerna": "./node_modules/.bin/lerna",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lerna:publish": "./node_modules/.bin/lerna publish --skip-npm",
   },
   "repository": {
     "type": "git",

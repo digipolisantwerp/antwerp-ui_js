@@ -1,28 +1,33 @@
 {
   "name": "@acpaas-ui/js-date-utils",
   "$rollup": {
-    "fileName": "js-date-utils",
+    "fileName": "acpaas-ui-js-date-utils",
     "moduleName": "JsDateUtils"
   },
   "version": "1.0.2",
   "description": "",
-  "main": "js-date-utils.umd.js",
-  "browser": "js-date-utils.cjs.js",
-  "module": "js-date-utils.es.js",
-  "es2015": "js-date-utils.es.js",
-  "typings": "acpaas-ui-localstorage.d.ts",
+  "main": "acpaas-ui-js-date-utils.umd.js",
+  "browser": "acpaas-ui-js-date-utils.cjs.js",
+  "module": "acpaas-ui-js-date-utils.es.js",
+  "es2015": "acpaas-ui-js-date-utils.es.js",
+  "typings": "acpaas-ui-js-date-utils.d.ts",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "postversion": "npm run build && npm run copy && npm publish dist",
     "rollup": "./node_modules/.bin/rollup -c --extend",
     "********************** TEST **********************": "",
     "test": "cross-env NODE_ENV=test mocha --require babel-register -t 2000 --recursive",
     "test:watch": "npm run test -- -w",
     "test:coverage": "nyc --reporter=lcov --reporter=text-summary npm test",
     "coverage:serve": "lite-server",
-    "********************** TYPESCRIPT **********************": "",
-    "types": "copy \"src/*.d.ts\" dist"
+    "********************** DEPLOY **********************": "",
+    "copy": "npm run copy:types && npm run copy:packageJson",
+    "copy:types": "copy \"src/*.d.ts\" dist/",
+    "copy:packageJson": "copy package.json dist/",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run rollup -c --extend"
   },
   "author": "",
   "license": "ISC",
@@ -38,6 +43,7 @@
     "copy": "^0.3.2",
     "cross-env": "^5.1.5",
     "mocha": "^5.1.1",
+    "rimraf": "^2.6.2",
     "rollup": "^0.58.2",
     "sinon": "^5.0.7",
     "sinon-chai": "^3.0.0"
