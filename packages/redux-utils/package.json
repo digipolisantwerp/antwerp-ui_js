@@ -4,7 +4,7 @@
     "fileName": "js-redux-utils",
     "moduleName": "JsReduxUtils"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/js-redux-utils.umd.js",
   "browser": "dist/js-redux-utils.cjs.js",
@@ -12,6 +12,7 @@
   "es2015": "dist/js-redux-utils.es.js",
   "typings": "acpaas-ui-js-redux-utils.d.ts",
   "scripts": {
+    "prepublishOnly": "npm run copypackage && npm publish",
     "rollup": "./node_modules/.bin/rollup -c --extend",
     "********************** TEST **********************": "",
     "test": "cross-env NODE_ENV=test mocha --require babel-register -t 2000 --recursive",
@@ -21,8 +22,7 @@
     "********************** TYPESCRIPT **********************": "",
     "types": "copy \"src/*.d.ts\" dist",
     "********************** DEPLOY **********************": "",
-    "copypackage": "cp -rf package.json dist",
-    "publish": "npm run copypackage && npm publish"
+    "copypackage": "cp -rf package.json dist"
   },
   "author": "",
   "license": "ISC",

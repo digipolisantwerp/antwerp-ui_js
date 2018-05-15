@@ -4,12 +4,12 @@
     "fileName": "js-date-utils",
     "moduleName": "JsDateUtils"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
-  "main": "dist/js-date-utils.umd.js",
-  "browser": "dist/js-date-utils.cjs.js",
-  "module": "dist/js-date-utils.es.js",
-  "es2015": "dist/js-date-utils.es.js",
+  "main": "js-date-utils.umd.js",
+  "browser": "js-date-utils.cjs.js",
+  "module": "js-date-utils.es.js",
+  "es2015": "js-date-utils.es.js",
   "typings": "acpaas-ui-localstorage.d.ts",
   "directories": {
     "test": "test"
