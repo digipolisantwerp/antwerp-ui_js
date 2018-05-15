@@ -259,8 +259,5 @@ jspm_packages
 # Project-specific
 # --------------------------------------------------------------------------- /
 
-# Cache folder
-.cache
-
 # Build folder
 dist
