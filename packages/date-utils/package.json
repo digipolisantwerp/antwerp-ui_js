@@ -1,0 +1,46 @@
+{
+  "name": "@acpaas-ui/js-date-utils",
+  "$rollup": {
+    "fileName": "js-date-utils",
+    "moduleName": "JsDateUtils"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/js-date-utils.umd.js",
+  "browser": "dist/js-date-utils.cjs.js",
+  "module": "dist/js-date-utils.es.js",
+  "es2015": "dist/js-date-utils.es.js",
+  "typings": "acpaas-ui-localstorage.d.ts",
+  "metadata": "acpaas-ui-localstorage.metadata.json",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "rollup": "./node_modules/.bin/rollup -c --extend",
+    "********************** TEST **********************": "",
+    "test": "cross-env NODE_ENV=test mocha --require babel-register -t 2000 --recursive",
+    "test:watch": "npm run test -- -w",
+    "test:coverage": "nyc --reporter=lcov --reporter=text-summary npm test",
+    "coverage:serve": "lite-server",
+    "********************** TYPESCRIPT **********************": "",
+    "types": "copy \"src/*.d.ts\" dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-istanbul": "^0.12.2",
+    "babel-plugin-rewire": "^1.1.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "chai-shallow-deep-equal": "^1.4.6",
+    "copy": "^0.3.2",
+    "cross-env": "^5.1.5",
+    "mocha": "^5.1.1",
+    "rollup": "^0.58.2",
+    "sinon": "^5.0.7",
+    "sinon-chai": "^3.0.0"
+  }
+}
