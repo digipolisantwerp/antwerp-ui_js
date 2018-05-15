@@ -18,12 +18,13 @@ yarn add @acpaas-ui/js-redux-utils
 ---
 
 ```
+// ES2015
 import { progressReducer } from '@acpaas-ui/js-redux-utils';
 ```
 
-## Higher order reducers (HORs)
+## Higher Order Reducers (HOR)
 ---
-There are 3 HORs available: the progress, basicType and target HOR. The usage of `combineReducers` is required for these HORs to work.
+There are 3 HORs available: `progress`, `basicType` and `target`. The usage of `combineReducers` is required for these HORs to work.
 
 ### progress
 

@@ -20,11 +20,11 @@ yarn add @acpaas-ui/js-date-utils
 ---
 
 ```
+// CommonJS
 const DateHelper = require('@acpaas-ui/js-date-utils').DateHelper;
 const DateGenerator = require('@acpaas-ui/js-date-utils').DateGenerator;
 
-// OR
-
+// ES2015
 import { DateHelper, DateGenerator } from '@acpaas-ui/js-date-utils';
 ```
 
