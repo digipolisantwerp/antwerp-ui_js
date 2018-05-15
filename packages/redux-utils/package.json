@@ -4,7 +4,7 @@
     "fileName": "js-redux-utils",
     "moduleName": "JsReduxUtils"
   },
-  "version": "1.0.1-0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/js-redux-utils.umd.js",
   "browser": "dist/js-redux-utils.cjs.js",
@@ -21,8 +21,8 @@
     "********************** TYPESCRIPT **********************": "",
     "types": "copy \"src/*.d.ts\" dist",
     "********************** DEPLOY **********************": "",
-    "copypackage": "cp -rf package.json lib",
-    "publish": "npm run copypackage"
+    "copypackage": "cp -rf package.json dist",
+    "publish": "npm run copypackage && npm publish"
   },
   "author": "",
   "license": "ISC",
