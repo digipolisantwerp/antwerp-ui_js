@@ -27,7 +27,7 @@
     "copy:types": "copy \"src/*.d.ts\" dist/",
     "copy:packageJson": "copy package.json dist/",
     "clean": "rimraf dist",
-    "build": "npm run clean && npm run rollup -c --extend"
+    "build": "npm run clean && npm run rollup"
   },
   "author": "",
   "license": "ISC",

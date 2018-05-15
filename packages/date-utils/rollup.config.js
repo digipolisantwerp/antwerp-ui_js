@@ -7,6 +7,6 @@ const rollupHelpers = require("../../rollup.helpers");
 export default {
     input: 'src/index.js',
     output: rollupHelpers.getOutput(packageJson.name, rollupProps.fileName),
-    external: dependencies,
+    external: Object.keys(dependencies),
     plugins: rollupHelpers.getPlugins(),
 };

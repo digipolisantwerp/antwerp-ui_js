@@ -2,7 +2,6 @@ const babel = require('rollup-plugin-babel');
 const uglify = require('rollup-plugin-uglify');
 const minify = require('uglify-es').minify;
 
-
 const getSingleOuput = (name, fileName, format) => {
     return {
         file: `./dist/${fileName}.${format}.js`,
