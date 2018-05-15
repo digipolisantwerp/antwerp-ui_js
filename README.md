@@ -23,10 +23,11 @@ To check out [live examples]() and docs, visit [acpaas-ui.digipolis.be/ui-compon
 
 ## Library Contents
 
-| Name       | Description                              | URL                                               |
-| ---------- | ---------------------------------------- | ------------------------------------------------- |
-| DateUtils  | Utilities for dates, such as formatting. | [Documentation](./packages/date-utils/README.md)  |
-| ReduxUtils | Utilities for Redux                      | [Documentation](./packages/redux-utils/README.md) |
+| Name              | Description                              | URL                                                      |
+| ----------------- | ---------------------------------------- | -------------------------------------------------------- |
+| DateUtils         | Utilities for dates, such as formatting. | [Documentation](./packages/date-utils/README.md)         |
+| ReduxUtils        | Utilities for Redux                      | [Documentation](./packages/redux-utils/README.md)        |
+| NotificationStore | Redux store for notifications            | [Documentation](./packages/notification-store/README.md) |
 
 ## Questions
 
