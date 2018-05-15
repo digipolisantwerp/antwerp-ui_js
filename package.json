@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lerna": "./node_modules/.bin/lerna",
-    "lerna:publish": "./node_modules/.bin/lerna publish --skip-npm",
+    "lerna:publish": "./node_modules/.bin/lerna publish --skip-npm"
   },
   "repository": {
     "type": "git",
