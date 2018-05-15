@@ -1,5 +1,7 @@
-export default (...args) => {
-    const dateValue = Date.parse.apply(null, args);
+export default (d) => {
+    if (d instanceof Date) {
+        return isNaN(d.valueOf()) ? null : d;
+    }
 
-    return isNaN(dateValue) ? null : new Date(dateValue);
+    return isNaN(Date.parse(d)) ? null : new Date(d);
 };

@@ -21,7 +21,7 @@ export default (dateString, format = '', options = {}) => {
         hh: date => addLeadingZero(date.getHours(), formattingOptions.leadingZero),
         mm: date => addLeadingZero(date.getMinutes(), formattingOptions.leadingZero),
         ss: date => addLeadingZero(date.getSeconds(), formattingOptions.leadingZero),
-        ms: date => addLeadingZero(date.getMilliseconds(), formattingOptions.leadingZero)
+        ms: date => addLeadingZero(date.getMilliseconds(), formattingOptions.leadingZero),
     };
 
     return format
