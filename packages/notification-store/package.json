@@ -32,7 +32,8 @@
     "copy:types": "copy \"src/*.d.ts\" dist/",
     "copy:packageJson": "copy package.json dist/",
     "clean": "rimraf dist",
-    "build": "npm run clean && npm run rollup"
+    "build": "npm run clean && npm run rollup",
+    "link": "npm run build && npm run copy && cd dist && npm link"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

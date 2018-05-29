@@ -27,7 +27,8 @@
     "copy:types": "copy \"src/*.d.ts\" dist/",
     "copy:packageJson": "copy package.json dist/",
     "clean": "rimraf dist",
-    "build": "npm run clean && npm run rollup"
+    "build": "npm run clean && npm run rollup",
+    "link": "npm run build && npm run copy && cd dist && npm link"
   },
   "author": "",
   "license": "ISC",
@@ -48,8 +49,7 @@
     "sinon": "^5.0.7",
     "sinon-chai": "^3.0.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "publishConfig": {
     "registry": "http://localhost:8081/repository/npm-private/"
   }
