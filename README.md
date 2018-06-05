@@ -1,6 +1,6 @@
 # ACPaaS UI - Javacript Libraries
 
----
+[![Build Status](https://travis-ci.org/FabianMeul/acpaas-ui-js.svg?branch=master)](https://travis-ci.org/FabianMeul/acpaas-ui-js)
 
 ## Introduction
 
