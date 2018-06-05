@@ -4,7 +4,7 @@
     "fileName": "acpaas-ui-js-date-utils",
     "moduleName": "JsDateUtils"
   },
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "",
   "main": "acpaas-ui-js-date-utils.umd.js",
   "browser": "acpaas-ui-js-date-utils.cjs.js",

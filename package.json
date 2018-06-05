@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://FabianMeul@bitbucket.org/FabianMeul/acpaas-ui-js.git"
+    "url": "git+https://github.com/FabianMeul/acpaas-ui-js.git"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/FabianMeul/acpaas-ui-js#readme",
+  "homepage": "https://github.com/FabianMeul/acpaas-ui-js#readme",
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-angular": "^7.0.1",

@@ -4,7 +4,7 @@
     "fileName": "acpaas-ui-js-redux-utils",
     "moduleName": "JsReduxUtils"
   },
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "",
   "main": "js-redux-utils.umd.js",
   "browser": "js-redux-utils.cjs.js",
