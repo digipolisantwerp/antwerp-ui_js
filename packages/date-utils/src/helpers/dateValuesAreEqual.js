@@ -1,22 +1,23 @@
 import parseDate from "./parseDate";
 
 export default (dates = [], comparator) => {
-    if (!(comparator in new Date())) {
-        return false;
-    }
+	if (!(comparator in new Date())) {
+		return false;
+	}
 
-    return dates
-        .map(date => parseDate(date) ? date[comparator]() : -1)
-        .reduce((acc, curr, i) => {
-            if (i === 0) {
-                acc = curr;
-                return acc;
-            }
+	return dates
+		.map(date => parseDate(date) ? date[comparator]() : -1)
+		.reduce((acc, curr, i) => {
+			if (i === 0) {
+				acc = curr;
 
-            if (acc >= 0 && curr >= 0 && acc === curr) {
-                return acc;
-            }
+				return acc;
+			}
 
-            return -1;
-        }) >= 0;
+			if (acc >= 0 && curr >= 0 && acc === curr) {
+				return acc;
+			}
+
+			return -1;
+		}) >= 0;
 };

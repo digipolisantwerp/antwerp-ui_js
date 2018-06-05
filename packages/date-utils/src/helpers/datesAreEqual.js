@@ -1,36 +1,36 @@
 import dateValuesAreEqual from "./dateValuesAreEqual";
 
-export default (dates = [], specifier = 'value') => {
-    if (!dates.length) {
-        return false;
-    }
+export default (dates = [], specifier = "value") => {
+	if (!dates.length) {
+		return false;
+	}
 
-    const compareMethods = {
-        'Y': 'getFullYear',
-        'M': 'getMonth',
-        'D': 'getDate',
-        'h': 'getHours',
-        'm': 'getMinutes',
-        's': 'getSeconds',
-        'ms': 'getMilliseconds',
-        'value': 'valueOf'
-    };
+	const compareMethods = {
+		"Y": "getFullYear",
+		"M": "getMonth",
+		"D": "getDate",
+		"h": "getHours",
+		"m": "getMinutes",
+		"s": "getSeconds",
+		"ms": "getMilliseconds",
+		"value": "valueOf",
+	};
 
-    const compareDates = (dates, specifier) => {
-        const verifiedSpecifier = compareMethods.hasOwnProperty(specifier) ? compareMethods[specifier] : compareMethods.value;
+	const compareDates = (d, s) => {
+		const verifiedSpecifier = compareMethods.hasOwnProperty(s) ? compareMethods[s] : compareMethods.value;
 
-        return dateValuesAreEqual(dates, verifiedSpecifier);
-    };
+		return dateValuesAreEqual(d, verifiedSpecifier);
+	};
 
-    if (Array.isArray(specifier)) {
-        for (let i = 0; i < specifier.length; i += 1) {
-            if (!compareDates(dates, specifier[i])) {
-                return false;
-            }
-        }
+	if (Array.isArray(specifier)) {
+		for (let i = 0; i < specifier.length; i += 1) {
+			if (!compareDates(dates, specifier[i])) {
+				return false;
+			}
+		}
 
-        return true;
-    }
+		return true;
+	}
 
-    return compareDates(dates, specifier);
+	return compareDates(dates, specifier);
 };
