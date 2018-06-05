@@ -1,216 +1,224 @@
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { Notification } from './notification';
-import escapeStringRegExp from 'escape-string-regexp';
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
+import { Notification } from "./notification";
+import escapeStringRegExp from "escape-string-regexp";
 
 const defaultOptions = {
-    allowOverrides: false,
-    defaultHandle: 'system',
-    defaultTarget: 'system',
-    defaultMessage: 'Something went wrong.',
-    defaultScope: 'root',
-    defaultTimer: 0
+	allowOverrides: false,
+	defaultHandle: "system",
+	defaultTarget: "system",
+	defaultMessage: "Something went wrong.",
+	defaultScope: "root",
+	defaultTimer: 0,
 };
 const API = {
-    options: {...defaultOptions},
-    messages: {},
-    notifications: new Map(),
-    subjects: new Map()
+	options: { ...defaultOptions },
+	messages: {},
+	notifications: new Map(),
+	subjects: new Map(),
 };
 
 export class NotificationStore {
-    static get allowOverrides() {
-        return API.options.allowOverrides;
-    }
-    static set allowOverrides(newValue = true) {
-        API.options.allowOverrides = typeof newValue === 'boolean' ? newValue : defaultOptions.allowOverrides;
-        return API.options.allowOverrides;
-    }
-    static get defaultHandle() {
-        return API.options.defaultHandle;
-    }
-    static set defaultHandle(newValue = defaultOptions.defaultHandle) {
-        API.options.defaultHandle = newValue.toString();
-        return API.options.defaultHandle;
-    }
-    static get defaultTarget() {
-        return API.options.defaultTarget;
-    }
-    static set defaultTarget(newValue = defaultOptions.defaultTarget) {
-        API.options.defaultTarget = newValue.toString();
-        return API.options.defaultTarget;
-    }
-    static get defaultMessage() {
-        return API.options.defaultMessage;
-    }
-    static set defaultMessage(newValue = defaultOptions.defaultMessage) {
-        API.options.defaultMessage = newValue.toString();
-        return API.options.defaultMessage;
-    }
-    static get defaultScope() {
-        return API.options.defaultScope;
-    }
-    static set defaultScope(newValue = defaultOptions.defaultScope) {
-        API.options.defaultScope = newValue.toString();
-        return API.options.defaultScope;
-    }
-    static get defaultTimer() {
-        return API.options.defaultTimer;
-    }
-    static set defaultTimer(newValue = defaultOptions.defaultTimer) {
-        API.options.defaultTimer = typeof newValue === 'number' ? newValue : defaultOptions.defaultTimer;
-        return API.options.defaultTimer;
-    }
-    static get messages() {
-        return {...API.messages};
-    }
-    static set messages(newMessages = {}) {
-        const messageLoader = [API.messages, newMessages];
-        API.messages = NotificationStore.allowOverrides ? Object.assign({}, ...messageLoader) : Object.assign({}, ...messageLoader.reverse());
-        return API.messages;
-    }
-    static get options() {
-        return {...API.options};
-    }
-    static set options(newOptions = defaultOptions) {
-        API.options = {...defaultOptions, ...newOptions};
-        return API.options;
-    }
-    static get subjects() {
-        return API.subjects;
-    }
-    static subscriber(store) {
-        if (!store) {
-            throw Error('No store provided to subscribe to!');
-        }
+	static get allowOverrides() {
+		return API.options.allowOverrides;
+	}
+	static set allowOverrides(newValue = true) {
+		API.options.allowOverrides = typeof newValue === "boolean" ? newValue : defaultOptions.allowOverrides;
 
-        API.subjects.set(store, new BehaviorSubject(NotificationStore.getFlatNotifications()));
+		return API.options.allowOverrides;
+	}
+	static get defaultHandle() {
+		return API.options.defaultHandle;
+	}
+	static set defaultHandle(newValue = defaultOptions.defaultHandle) {
+		API.options.defaultHandle = newValue.toString();
 
-        return API.subjects.get(store);
-    }
-    static getFlatTarget(targetKey) {
-        const notifications = [];
-        const target = API.notifications.get(targetKey);
+		return API.options.defaultHandle;
+	}
+	static get defaultTarget() {
+		return API.options.defaultTarget;
+	}
+	static set defaultTarget(newValue = defaultOptions.defaultTarget) {
+		API.options.defaultTarget = newValue.toString();
 
-        if (target) {
-            target.forEach(notification => {
-                notifications.push(notification);
-            });
-        }
+		return API.options.defaultTarget;
+	}
+	static get defaultMessage() {
+		return API.options.defaultMessage;
+	}
+	static set defaultMessage(newValue = defaultOptions.defaultMessage) {
+		API.options.defaultMessage = newValue.toString();
 
-        return notifications;
-    }
-    static getFlatNotifications(target) {
-        if (target) {
-            return NotificationStore.getFlatTarget(target);
-        }
+		return API.options.defaultMessage;
+	}
+	static get defaultScope() {
+		return API.options.defaultScope;
+	}
+	static set defaultScope(newValue = defaultOptions.defaultScope) {
+		API.options.defaultScope = newValue.toString();
 
-        let notifications = {};
+		return API.options.defaultScope;
+	}
+	static get defaultTimer() {
+		return API.options.defaultTimer;
+	}
+	static set defaultTimer(newValue = defaultOptions.defaultTimer) {
+		API.options.defaultTimer = typeof newValue === "number" ? newValue : defaultOptions.defaultTimer;
 
-        API.notifications.forEach((value, target) => {
-            notifications[target] = NotificationStore.getFlatTarget(target);
-        });
+		return API.options.defaultTimer;
+	}
+	static get messages() {
+		return { ...API.messages };
+	}
+	static set messages(newMessages = {}) {
+		const messageLoader = [API.messages, newMessages];
+		API.messages = NotificationStore.allowOverrides ? Object.assign({}, ...messageLoader) : Object.assign({}, ...messageLoader.reverse());
 
-        return notifications;
-    }
-    static deleteNotification(notification) {
-        if (!notification || !(notification instanceof Notification)) {
-            throw Error('Invalid notification provided.');
-        }
+		return API.messages;
+	}
+	static get options() {
+		return { ...API.options };
+	}
+	static set options(newOptions = defaultOptions) {
+		API.options = { ...defaultOptions, ...newOptions };
 
-        const target = API.notifications.get(notification.target);
+		return API.options;
+	}
+	static get subjects() {
+		return API.subjects;
+	}
+	static subscriber(store) {
+		if (!store) {
+			throw Error("No store provided to subscribe to!");
+		}
 
-        if (!target) {
-            return;
-        }
+		API.subjects.set(store, new BehaviorSubject(NotificationStore.getFlatNotifications()));
 
-        target.delete(notification);
+		return API.subjects.get(store);
+	}
+	static getFlatTarget(targetKey) {
+		const notifications = [];
+		const target = API.notifications.get(targetKey);
 
-        NotificationStore.updateSubjects();
-    }
-    static updateSubjects() {
-        const currNotifications = NotificationStore.getFlatNotifications();
+		if (target) {
+			target.forEach(notification => {
+				notifications.push(notification);
+			});
+		}
 
-        API.subjects.forEach(subject => {
-            subject.next(currNotifications);
-        });
-    }
-    static resetStore() {
-        API.options = {...defaultOptions};
-        API.messages = {};
-        API.notifications = new Map();
-        API.subjects = new Map();
-    }
+		return notifications;
+	}
+	static getFlatNotifications(target) {
+		if (target) {
+			return NotificationStore.getFlatTarget(target);
+		}
 
-    constructor(newMessages = {}) {
-        this.loadMessages(newMessages);
+		const notifications = {};
 
-        this.notifications = NotificationStore.subscriber(this);
-    }
+		API.notifications.forEach((value, t) => {
+			notifications[t] = NotificationStore.getFlatTarget(t);
+		});
 
-    getMessages() {
-        return {...API.messages};
-    }
+		return notifications;
+	}
+	static deleteNotification(notification) {
+		if (!notification || !(notification instanceof Notification)) {
+			throw Error("Invalid notification provided.");
+		}
 
-    getMessage(handle, replace = {}) {
-        let msg = API.messages.hasOwnProperty(handle) ? API.messages[handle] : API.options.defaultMessage;
-        const patterns = Object.getOwnPropertyNames(replace).map(prop => escapeStringRegExp(prop)).join('|');
-        const pattern = new RegExp(`<% (${patterns}) %>`, 'g');
+		const target = API.notifications.get(notification.target);
 
-        return msg.replace(pattern, (match, prop) => {
-            return replace[prop];
-        });
-    }
+		if (!target) {
+			return;
+		}
 
-    loadMessages(newMessages) {
-        NotificationStore.messages = newMessages;
-    }
+		target.delete(notification);
 
-    triggerNotification(handle = NotificationStore.defaultHandle, target = NotificationStore.defaultTarget, options = {}, replace = {}) {
-        const notification = new Notification({
-            message: options.message || this.getMessage(handle, replace),
-            ...Notification.parseOptions(options),
-            handle: handle,
-            target: target
-        });
+		NotificationStore.updateSubjects();
+	}
+	static updateSubjects() {
+		const currNotifications = NotificationStore.getFlatNotifications();
 
-        this.loadNotification(notification);
-    }
+		API.subjects.forEach(subject => {
+			subject.next(currNotifications);
+		});
+	}
+	static resetStore() {
+		API.options = { ...defaultOptions };
+		API.messages = {};
+		API.notifications = new Map();
+		API.subjects = new Map();
+	}
 
-    loadNotification(notification) {
-        if (!notification || !notification.target) {
-            throw Error('Invalid notification provided.');
-        }
+	constructor(newMessages = {}) {
+		this.loadMessages(newMessages);
 
-        if (!API.notifications.has(notification.target)) {
-            API.notifications.set(notification.target, new Map());
-        }
+		this.notifications = NotificationStore.subscriber(this);
+	}
 
-        const target = API.notifications.get(notification.target);
+	getMessages() {
+		return { ...API.messages };
+	}
 
-        target.set(notification, notification);
+	getMessage(handle, replace = {}) {
+		const msg = API.messages.hasOwnProperty(handle) ? API.messages[handle] : API.options.defaultMessage;
+		const patterns = Object.getOwnPropertyNames(replace).map(prop => escapeStringRegExp(prop)).join("|");
+		const pattern = new RegExp(`<% (${patterns}) %>`, "g");
 
-        NotificationStore.updateSubjects();
-    }
+		return msg.replace(pattern, (match, prop) => {
+			return replace[prop];
+		});
+	}
 
-    getNotifications(target) {
-        return NotificationStore.getFlatNotifications(target);
-    }
+	loadMessages(newMessages) {
+		NotificationStore.messages = newMessages;
+	}
 
-    clearNotification(notification) {
-        NotificationStore.deleteNotification(notification);
-    }
+	triggerNotification(handle = NotificationStore.defaultHandle, target = NotificationStore.defaultTarget, options = {}, replace = {}) {
+		const notification = new Notification({
+			message: options.message || this.getMessage(handle, replace),
+			...Notification.parseOptions(options),
+			handle: handle,
+			target: target,
+		});
 
-    clearTarget(target) {
-        if (!target) {
-            throw Error('No target provided.');
-        }
+		this.loadNotification(notification);
+	}
 
-        if (!API.notifications.has(target)) {
-            return;
-        }
+	loadNotification(notification) {
+		if (!notification || !notification.target) {
+			throw Error("Invalid notification provided.");
+		}
 
-        API.notifications.delete(target);
+		if (!API.notifications.has(notification.target)) {
+			API.notifications.set(notification.target, new Map());
+		}
 
-        NotificationStore.updateSubjects();
-    }
+		const target = API.notifications.get(notification.target);
+
+		target.set(notification, notification);
+
+		NotificationStore.updateSubjects();
+	}
+
+	getNotifications(target) {
+		return NotificationStore.getFlatNotifications(target);
+	}
+
+	clearNotification(notification) {
+		NotificationStore.deleteNotification(notification);
+	}
+
+	clearTarget(target) {
+		if (!target) {
+			throw Error("No target provided.");
+		}
+
+		if (!API.notifications.has(target)) {
+			return;
+		}
+
+		API.notifications.delete(target);
+
+		NotificationStore.updateSubjects();
+	}
 }

@@ -18,5 +18,5 @@ export { default as generateRange } from "./generators/range";
 export { default as generateWeek } from "./generators/week";
 
 export { DEFAULT_FORMATTING_OPTIONS } from "./formatting.const";
-export { default as DateHelper } from './datehelper';
-export { default as DateGenerator } from './generator';
+export { default as DateHelper } from "./datehelper";
+export { default as DateGenerator } from "./generator";

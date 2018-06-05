@@ -1,89 +1,89 @@
 import progressReducer from "./progress";
 
 const typeActions = (type) => {
-    const upperType = type.toUpperCase().replace(/\s/g, "");
-    const actionLoad = `${upperType}/LOAD`;
-    const actionLoadMore = `${upperType}/LOAD_MORE`;
-    const actionClear = `${upperType}/CLEAR`;
+	const upperType = type.toUpperCase().replace(/\s/g, "");
+	const actionLoad = `${upperType}/LOAD`;
+	const actionLoadMore = `${upperType}/LOAD_MORE`;
+	const actionClear = `${upperType}/CLEAR`;
 
-    return {
-        actionLoad,
-        actionLoadMore,
-        actionClear
-    };
+	return {
+		actionLoad,
+		actionLoadMore,
+		actionClear,
+	};
 };
 
 const handleState = (
-    state,
-    action,
-    {
-        actionLoad,
-        actionLoadMore,
-        actionClear
-    },
-    {
-        dataType
-    }
+	state,
+	action,
+	{
+		actionLoad,
+		actionLoadMore,
+		actionClear,
+	},
+	{
+		dataType,
+	}
 ) => {
-    if (action.type === actionLoad) {
-        return action.data;
-    }
+	if (action.type === actionLoad) {
+		return action.data;
+	}
 
-    if (action.type === actionLoadMore) {
-        return dataType === "list" ? [...state, ...action.data] : action.data;
-    }
+	if (action.type === actionLoadMore) {
+		return dataType === "list" ? [...state, ...action.data] : action.data;
+	}
 
-    if (action.type === actionClear) {
-        return dataType === "list" ? [] : null;
-    }
+	if (action.type === actionClear) {
+		return dataType === "list" ? [] : null;
+	}
 
-    return state;
+	return state;
 };
 
 const reducer = (
-    {
-        type,
-        dataType
-    },
-    initialState
+	{
+		type,
+		dataType,
+	},
+	initialState
 ) => (
-    state = initialState,
-    action
+	state = initialState,
+	action
 ) => {
-    const currState = state !== undefined ? state : dataType === "list" ? [] : null;
+	const currState = state !== undefined ? state : dataType === "list" ? [] : null;
 
-    return handleState(
-        currState,
-        action,
-        typeActions(type),
-        {
-            type,
-            dataType
-        }
-    );
+	return handleState(
+		currState,
+		action,
+		typeActions(type),
+		{
+			type,
+			dataType,
+		}
+	);
 };
 
 const basicTypeReducer =  (
-    {
-        type = "BASIC_DEFAULT",
-        progress = false,
-        dataType = "single"
-    } = {},
-    initialState
+	{
+		type = "BASIC_DEFAULT",
+		progress = false,
+		dataType = "single",
+	} = {},
+	initialState
 ) => {
-    let wrappedReducer = reducer(
-        {
-            type,
-            dataType
-        },
-        initialState
-    );
+	let wrappedReducer = reducer(
+		{
+			type,
+			dataType,
+		},
+		initialState
+	);
 
-    if (progress) {
-        wrappedReducer = progressReducer(type, wrappedReducer);
-    }
+	if (progress) {
+		wrappedReducer = progressReducer(type, wrappedReducer);
+	}
 
-    return wrappedReducer;
+	return wrappedReducer;
 };
 
 export default basicTypeReducer;
