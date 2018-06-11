@@ -46,7 +46,7 @@ const getExternal = (dependencies) => {
 const getGlobals = (dependencies) => {
 	return Object.keys(dependencies).reduce((globals, dep) => Object.assign(globals, {
 		[dep]: capitalize(camelcase(dep)),
-	}, {}));
+	}), {});
 };
 
 module.exports = {
