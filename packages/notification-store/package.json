@@ -31,7 +31,7 @@
     "********************** Deploy **********************": "",
     "copy": "npm run copy:types && npm run copy:packageJson",
     "copy:types": "copy \"src/*.d.ts\" dist/",
-    "copy:packageJson": "copy package.json dist/",
+    "copy:packageJson": "node ../../scripts/package.js date-utils",
     "clean": "rimraf dist",
     "build": "npm run clean && npm run rollup",
     "link": "npm run build && npm run copy && cd dist && npm link"
@@ -58,8 +58,5 @@
   },
   "dependencies": {
     "rxjs": "^5.1.0"
-  },
-  "publishConfig": {
-    "registry": "http://localhost:8081/repository/npm-private/"
   }
 }
