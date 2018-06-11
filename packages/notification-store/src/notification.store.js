@@ -1,17 +1,10 @@
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { Notification } from "./notification";
 import escapeStringRegExp from "escape-string-regexp";
+import { NOTIFICATION_STORE_DEFAULTS } from "./notification.conf";
 
-const defaultOptions = {
-	allowOverrides: false,
-	defaultHandle: "system",
-	defaultTarget: "system",
-	defaultMessage: "Something went wrong.",
-	defaultScope: "root",
-	defaultTimer: 0,
-};
 const API = {
-	options: { ...defaultOptions },
+	options: { ...NOTIFICATION_STORE_DEFAULTS },
 	messages: {},
 	notifications: new Map(),
 	subjects: new Map(),
@@ -22,14 +15,14 @@ export class NotificationStore {
 		return API.options.allowOverrides;
 	}
 	static set allowOverrides(newValue = true) {
-		API.options.allowOverrides = typeof newValue === "boolean" ? newValue : defaultOptions.allowOverrides;
+		API.options.allowOverrides = typeof newValue === "boolean" ? newValue : NOTIFICATION_STORE_DEFAULTS.allowOverrides;
 
 		return API.options.allowOverrides;
 	}
 	static get defaultHandle() {
 		return API.options.defaultHandle;
 	}
-	static set defaultHandle(newValue = defaultOptions.defaultHandle) {
+	static set defaultHandle(newValue = NOTIFICATION_STORE_DEFAULTS.defaultHandle) {
 		API.options.defaultHandle = newValue.toString();
 
 		return API.options.defaultHandle;
@@ -37,7 +30,7 @@ export class NotificationStore {
 	static get defaultTarget() {
 		return API.options.defaultTarget;
 	}
-	static set defaultTarget(newValue = defaultOptions.defaultTarget) {
+	static set defaultTarget(newValue = NOTIFICATION_STORE_DEFAULTS.defaultTarget) {
 		API.options.defaultTarget = newValue.toString();
 
 		return API.options.defaultTarget;
@@ -45,7 +38,7 @@ export class NotificationStore {
 	static get defaultMessage() {
 		return API.options.defaultMessage;
 	}
-	static set defaultMessage(newValue = defaultOptions.defaultMessage) {
+	static set defaultMessage(newValue = NOTIFICATION_STORE_DEFAULTS.defaultMessage) {
 		API.options.defaultMessage = newValue.toString();
 
 		return API.options.defaultMessage;
@@ -53,7 +46,7 @@ export class NotificationStore {
 	static get defaultScope() {
 		return API.options.defaultScope;
 	}
-	static set defaultScope(newValue = defaultOptions.defaultScope) {
+	static set defaultScope(newValue = NOTIFICATION_STORE_DEFAULTS.defaultScope) {
 		API.options.defaultScope = newValue.toString();
 
 		return API.options.defaultScope;
@@ -61,8 +54,8 @@ export class NotificationStore {
 	static get defaultTimer() {
 		return API.options.defaultTimer;
 	}
-	static set defaultTimer(newValue = defaultOptions.defaultTimer) {
-		API.options.defaultTimer = typeof newValue === "number" ? newValue : defaultOptions.defaultTimer;
+	static set defaultTimer(newValue = NOTIFICATION_STORE_DEFAULTS.defaultTimer) {
+		API.options.defaultTimer = typeof newValue === "number" ? newValue : NOTIFICATION_STORE_DEFAULTS.defaultTimer;
 
 		return API.options.defaultTimer;
 	}
@@ -78,8 +71,8 @@ export class NotificationStore {
 	static get options() {
 		return { ...API.options };
 	}
-	static set options(newOptions = defaultOptions) {
-		API.options = { ...defaultOptions, ...newOptions };
+	static set options(newOptions = NOTIFICATION_STORE_DEFAULTS) {
+		API.options = { ...NOTIFICATION_STORE_DEFAULTS, ...newOptions };
 
 		return API.options;
 	}
@@ -143,7 +136,7 @@ export class NotificationStore {
 		});
 	}
 	static resetStore() {
-		API.options = { ...defaultOptions };
+		API.options = { ...NOTIFICATION_STORE_DEFAULTS };
 		API.messages = {};
 		API.notifications = new Map();
 		API.subjects = new Map();

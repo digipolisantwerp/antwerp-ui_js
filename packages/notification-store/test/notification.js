@@ -86,14 +86,5 @@ describe("Notification class", () => {
 			expect(notification.timer).to.equal(defaultOptions.timer);
 			expect(notification.scope).to.equal("things");
 		});
-
-		it("should have a clear function that calls the notification store", () => {
-			const clear = sinon.spy(NotificationStore, "deleteNotification");
-			const notification = new Notification();
-
-			expect(typeof notification.clear).to.equal("function");
-			notification.clear();
-			expect(clear).to.be.calledWith(notification);
-		});
 	});
 });
