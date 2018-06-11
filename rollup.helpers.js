@@ -43,7 +43,7 @@ const getExternal = (dependencies = {}) => {
 	return Object.keys(dependencies);
 };
 
-const getGlobals = (dependencies) => {
+const getGlobals = (dependencies = {}) => {
 	return Object.keys(dependencies).reduce((globals, dep) => Object.assign(globals, {
 		[dep]: capitalize(camelcase(dep)),
 	}), {});
