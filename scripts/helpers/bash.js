@@ -5,6 +5,7 @@ module.exports = (cmd, args) => new Promise((resolve, reject) => {
 		stdio: 'inherit',
 	});
 
+	// TODO: investigate clean output further
 	// child.stdout.pipe(process.stdout);
 	// child.stderr.pipe(process.stderr);
 
