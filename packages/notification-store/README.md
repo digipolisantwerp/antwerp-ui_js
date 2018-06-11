@@ -67,13 +67,13 @@ store.triggerNotification('404', 'statusbar', { timer: 1000 });
 
 ### Clearing notifications
 
-You can clear a notification by calling it's `clear` method:
+You can clear a notification by calling the `clearNotification` method on the store:
 
 ```
 const notifications = store.getNotifications('statusbar');
 const notificationToClear = notifications.find(notification => notification.handle === 'clearme');
 
-notificationToClear.clear();
+store.clearNotification(notificationToClear);
 ```
 
 ### Subscribing to notifications
@@ -106,9 +106,6 @@ const notifications = store.notifications.getValue();
 * `type` **(string)**: the type of notification (N, I, E, W, S)
 * `timer` **(number)**: the lifespan of the notification once it is shown (in ms)
 * `scope` **(string)**: the app scope the notification should be visible in
-
-**Instance methods**
-* `clear()`: clears the notification in the store
 
 ### NotificationStore Class
 

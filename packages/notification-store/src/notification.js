@@ -1,23 +1,8 @@
-import { NotificationStore } from "./notification.store";
-
-const NOTIFICATION_TYPES = {
-	INFO: "I",
-	ERROR: "E",
-	WARNING: "W",
-	SUCCESS: "S",
-	NOTIFICATION: "N",
-};
-const defaultOptions = {
-	handle: NotificationStore.defaultHandle,
-	target: NotificationStore.defaultTarget,
-	type: NOTIFICATION_TYPES.NOTIFICATION,
-	timer: NotificationStore.defaultTimer,
-	scope: NotificationStore.defaultScope,
-};
+import { NOTIFICATION_TYPES, NOTIFICATION_DEFAULTS } from "./notification.conf";
 
 export class Notification {
 	static get defaultOptions() {
-		return { ...defaultOptions };
+		return { ...NOTIFICATION_DEFAULTS };
 	}
 	static get availableTypes() {
 		return { ...NOTIFICATION_TYPES };
@@ -25,8 +10,8 @@ export class Notification {
 	static parseOptions(options = {}) {
 		const result = {};
 
-		for (const prop in defaultOptions) {
-			result[prop] = options[prop] || defaultOptions[prop];
+		for (const prop in NOTIFICATION_DEFAULTS) {
+			result[prop] = options[prop] || NOTIFICATION_DEFAULTS[prop];
 		}
 
 		return result;
@@ -34,7 +19,7 @@ export class Notification {
 
 	constructor(options = {}) {
 		options = {
-			...defaultOptions,
+			...NOTIFICATION_DEFAULTS,
 			...options,
 		};
 
@@ -44,9 +29,5 @@ export class Notification {
 		this.type = options.type;
 		this.timer = options.timer;
 		this.scope = options.scope;
-	}
-
-	clear() {
-		NotificationStore.deleteNotification(this);
 	}
 }
