@@ -31,7 +31,6 @@ const getPlugins = () => {
 			plugins: [
 				'external-helpers',
 			],
-			externalHelpers: true,
         }),
         uglify({
             mangle: false
