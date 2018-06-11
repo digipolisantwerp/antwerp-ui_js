@@ -2,7 +2,6 @@
 
 import "babel-polyfill";
 import chai from "chai";
-import sinon from "sinon";
 import sinonChai from "sinon-chai";
 import { Notification, __RewireAPI__ as NotificationAPI } from "../src/notification";
 

@@ -1,4 +1,4 @@
-import { NOTIFICATION_STORE_DEFAULTS, NOTIFICATION_TYPES, NOTIFICATION_DEFAULTS } from "./notification.conf";
+import { NOTIFICATION_TYPES, NOTIFICATION_DEFAULTS } from "./notification.conf";
 
 export class Notification {
 	static get defaultOptions() {
