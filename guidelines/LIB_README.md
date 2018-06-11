@@ -51,27 +51,38 @@ You need to include **&lt;external requirements&gt;** in your page.
 
 ### Methods
 
-Method1
+**Method**
 ___
 
 ```
-method1(param1, param2): ReturnType
+method(param1, param2): ReturnType
 ```
 
 | Param | Type | Required | Description
 |---------------------|-------------------|------------------|------------------|
 | param1 | CustomInterface | yes | **&lt;short description&gt;**|
 
-Method2
-___
+&nbsp;
+
+### Events
+
+**Event**
+---
+
+&lt;short event description&gt;
+
 
 ```
-method2(param1, param2): ReturnType
+subscriber.on(<event2>, (param1, param2) => {
+
+})
 ```
 
 | Param | Type | Required | Description
 |---------------------|-------------------|------------------|------------------|
 | param1 | CustomInterface | yes | **&lt;short description&gt;**|
+
+&nbsp;
 
 ## Development
 

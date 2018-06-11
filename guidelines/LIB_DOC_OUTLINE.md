@@ -16,7 +16,7 @@ One or more code samples, depending on the different use cases.
 
 ## Methods
 
-Method1
+**Method1**
 ___
 
 ```
@@ -27,7 +27,9 @@ method1(param1, param2): ReturnType
 |---------------------|-------------------|------------------|------------------|
 | param1 | CustomInterface | yes | **&lt;short description&gt;**|
 
-Method2
+&nbsp;
+
+**Method2**
 ___
 
 ```
@@ -40,7 +42,7 @@ method2(param1, param2): ReturnType
 
 ## Events
 
-Event1
+**Event1**
 ___
 
 &lt;short event description&gt;
@@ -55,7 +57,9 @@ subscriber.on(<event1>, (param1, param2) => {
 |---------------------|-------------------|------------------|------------------|
 | param1 | CustomInterface | yes | **&lt;short description&gt;**|
 
-Event2
+&nbsp;
+
+**Event2**
 ___
 
 &lt;short event description&gt;
