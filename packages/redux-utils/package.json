@@ -4,7 +4,7 @@
     "fileName": "acpaas-ui-js-redux-utils",
     "moduleName": "JsReduxUtils"
   },
-  "version": "1.0.0",
+  "version": "1.0.1-alpha.0",
   "description": "",
   "main": "js-redux-utils.umd.js",
   "browser": "js-redux-utils.cjs.js",
@@ -50,7 +50,6 @@
     "sinon": "^5.0.7",
     "sinon-chai": "^3.0.0"
   },
-  "dependencies": {},
   "publishConfig": {
     "registry": "http://localhost:8081/repository/npm-private/"
   }
