@@ -38,26 +38,27 @@
     "link": "npm run build && npm run copy && cd dist && npm link"
   },
   "devDependencies": {
-    "@studiohyperdrive/eslint-config": "^3.0.2",
-    "babel-core": "^6.26.3",
-    "babel-istanbul": "^0.12.2",
-    "babel-plugin-rewire": "^1.1.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0",
-    "chai": "^4.1.2",
-    "chai-shallow-deep-equal": "^1.4.6",
-    "copy": "^0.3.2",
-    "cross-env": "^5.1.5",
-    "eslint": "^4.19.1",
-    "eslint-plugin-chai-friendly": "^0.4.1",
-    "mocha": "^5.1.1",
-    "rimraf": "^2.6.2",
-    "rollup": "^0.58.2",
-    "sinon": "^5.0.7",
-    "sinon-chai": "^3.0.0"
+    "@studiohyperdrive/eslint-config": "~3.0.2",
+    "babel-core": "~6.26.3",
+    "babel-istanbul": "~0.12.2",
+    "babel-plugin-rewire": "~1.1.0",
+    "babel-plugin-transform-object-rest-spread": "~6.26.0",
+    "babel-preset-env": "~1.7.0",
+    "babel-register": "~6.26.0",
+    "chai": "~4.1.2",
+    "chai-shallow-deep-equal": "~1.4.6",
+    "copy": "~0.3.2",
+    "cross-env": "~5.1.5",
+    "eslint": "~4.19.1",
+    "eslint-plugin-chai-friendly": "~0.4.1",
+    "mocha": "~5.1.1",
+    "rimraf": "~2.6.2",
+    "rollup": "~0.58.2",
+    "rxjs": "~6.1.0",
+    "sinon": "~5.0.7",
+    "sinon-chai": "~3.0.0"
   },
-  "dependencies": {
-    "rxjs": "^5.1.0"
+  "peerDependencies": {
+    "rxjs": "~6.1.0"
   }
 }

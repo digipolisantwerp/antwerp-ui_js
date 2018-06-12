@@ -10,7 +10,7 @@
     "lint": "npm run lerna:extend -- lint",
     "test": "npm run lerna:extend -- test",
     "build": "npm run lerna:extend -- build",
-    "deploy": "npm run lerna -- publish --skip-npm"
+    "deploy": "npm run lerna:extend -- publish --skip-npm"
   },
   "repository": {
     "type": "git",
