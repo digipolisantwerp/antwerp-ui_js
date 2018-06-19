@@ -35,7 +35,7 @@ To check out [live examples]() and docs, visit [acpaas-ui.digipolis.be/ui-compon
 
 ## Questions
 
-For questions and support please use the [the official forum]() or [community chat](). The issue list of this repo is **exclusively** for bug reports and feature requests.
+For questions and support please use [StackOverflow Issues][stackoverflow-issues]. The issue list of this repo is **exclusively** for bug reports and feature requests.
 
 ## Issues
 
@@ -43,7 +43,7 @@ Please make sure to read the [Issue Reporting Checklist]() before opening an iss
 
 ## Changelog
 
-Detailed changes for each release are documented in the [release notes]().
+Detailed changes for each release are documented in the [changelog](./CHANGELOG.md).
 
 ## Contributing
 
@@ -67,6 +67,9 @@ Copyright (c) 2016-present, Digipolis
 
 <!-- Generic Links -->
 [acpaas-ui]: https://acpaas-ui.digipolis.be
+
+<!-- StackOverflow -->
+[stackoverflow-issues]: https://stackoverflow.com/questions/tagged/acpaas-ui
 
 <!-- Travis -->
 [acpaas-ui-js-build]: https://img.shields.io/travis/digipolisantwerp/acpaas-ui-js.svg
