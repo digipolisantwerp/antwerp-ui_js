@@ -1,6 +1,7 @@
 function defer(resolve, reject, payload) {
-	if (payload.error != null) {
+	if (payload.error !== null) {
 		reject(payload.error);
+
 		return;
 	}
 	resolve(payload.data);
@@ -87,7 +88,7 @@ export class EidCard {
 				readAddressDataSignature(cardInstance),
 				readRawRnData(cardInstance),
 				readRnDataSignature(cardInstance),
-				readCitizenCertificate(cardInstance)
+				readCitizenCertificate(cardInstance),
 			]).then(([
 				authCer,
 				nonRepudCer,
@@ -105,7 +106,7 @@ export class EidCard {
 					addressDataSignature: addressSignature,
 					rawRnData: rawRnData,
 					rnDataSignature: rnDatasignature,
-					citizenCertificate: citizenCer
+					citizenCertificate: citizenCer,
 				});
 			}, (error) => {
 				reject(error);
@@ -115,6 +116,7 @@ export class EidCard {
 
 	signWithAuthenticationToken(token) {
 		const self = this;
+
 		return new Promise((resolve, reject) => {
 			self.cardInstance.authenticateRsa(token, (signature, error) => {
 				self.cardInstance.stopSigningSession();
@@ -132,7 +134,7 @@ export class EidCard {
 			enterPinOnPinPad: requestCallback,
 			correctPin: onCorrectPin,
 			onError: onError,
-			setPinTriesLeft: onTriesLeftUpdated
+			setPinTriesLeft: onTriesLeftUpdated,
 		};
 	}
 
@@ -141,7 +143,7 @@ export class EidCard {
 			getPin: requestCallback,
 			correctPin: onCorrectPin,
 			onError: onError,
-			setPinTriesLeft: onTriesLeftUpdated
+			setPinTriesLeft: onTriesLeftUpdated,
 		});
 	}
 }

@@ -1,5 +1,8 @@
-import { StatusCodes, API } from './constants/index';
-import { CardReaderMonitor } from './cardreaderMonitor';
+// ESLint comment to allow "IntoitCardReaderApiFactory" as a global.
+/*globals IntoitCardReaderApiFactory:false*/
+
+import { StatusCodes, API } from "./constants/index";
+import { CardReaderMonitor } from "./cardreaderMonitor";
 
 export class Middleware {
 	constructor() {
@@ -26,6 +29,7 @@ export class Middleware {
 
 	static isBrowserCompatible() {
 		const compatibleApis = IntoitCardReaderApiFactory.getCompatibleApiNames();
+
 		return !!~compatibleApis.indexOf(API.MIDDLEWARE);
 	}
 

@@ -1,4 +1,4 @@
-import { MIDDLEWARE, CHROME_EXTENSION, APPLET } from './api';
+import { MIDDLEWARE, CHROME_EXTENSION, APPLET } from "./api";
 
 import {
 	OK,
@@ -7,8 +7,8 @@ import {
 	SERVICE_OUT_OF_DATE,
 	EXTENSION_NOT_INSTALLED,
 	NATIVE_APP_NOT_INSTALLED,
-	SANDBOXED
-} from './statusCodes';
+	SANDBOXED,
+} from "./statusCodes";
 
 import {
 	INCORRECT_CARD_INSERTED,
@@ -19,23 +19,23 @@ import {
 	INCORRECT_CARD_REMOVED,
 	NO_CARD_READER_FOUND,
 	CARD_READER_CONNECTED,
-	CARD_READER_DISCONNECTED
-} from './events';
+	CARD_READER_DISCONNECTED,
+} from "./events";
 
 import {
-	PIN_PAD
-} from './features';
+	PIN_PAD,
+} from "./features";
 
 
 export const API = {
 	MIDDLEWARE,
 	CHROME_EXTENSION,
-	APPLET
+	APPLET,
 };
 
 export const Features = {
-	PIN_PAD
-}
+	PIN_PAD,
+};
 
 export const StatusCodes = {
 	OK,
@@ -44,7 +44,7 @@ export const StatusCodes = {
 	SERVICE_OUT_OF_DATE,
 	EXTENSION_NOT_INSTALLED,
 	NATIVE_APP_NOT_INSTALLED,
-	SANDBOXED
+	SANDBOXED,
 };
 
 export const Events = {
@@ -56,5 +56,5 @@ export const Events = {
 	INCORRECT_CARD_REMOVED,
 	NO_CARD_READER_FOUND,
 	CARD_READER_CONNECTED,
-	CARD_READER_DISCONNECTED
+	CARD_READER_DISCONNECTED,
 };

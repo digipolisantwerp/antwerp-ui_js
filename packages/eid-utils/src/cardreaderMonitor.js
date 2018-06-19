@@ -1,5 +1,5 @@
-import { Events } from './constants/index';
-import { EidCard } from './eidCard';
+import { Events } from "./constants/index";
+import { EidCard } from "./eidCard";
 
 const eventListeners = {};
 
@@ -16,12 +16,12 @@ export class CardReaderMonitor {
 			incorrectCardRemoved: () => this.trigger(Events.INCORRECT_CARD_REMOVED),
 			noCardReaderFound: () => this.trigger(Events.NO_CARD_READER_FOUND),
 			cardReaderConnected: (name) => this.trigger(Events.CARD_READER_CONNECTED, { name: name }),
-			cardReaderDisconnected: (name) => this.trigger(Events.CARD_READER_DISCONNECTED, { name: name })
+			cardReaderDisconnected: (name) => this.trigger(Events.CARD_READER_DISCONNECTED, { name: name }),
 		});
 	}
 
 	on(eventCode, callback) {
-		const eventName = eventCode === '*' ? 'all' : eventCode;
+		const eventName = eventCode === "*" ? "all" : eventCode;
 
 		const events = eventListeners[eventName] || [];
 		events.push(callback);
@@ -32,7 +32,7 @@ export class CardReaderMonitor {
 		const listeners = eventListeners[event] || [];
 		listeners.forEach((eventCallback) => eventCallback(event, payload));
 
-		const allListeners = eventListeners['all'] || [];
+		const allListeners = eventListeners.all || [];
 		allListeners.forEach((eventCallback) => eventCallback(event, payload));
 	}
 }
