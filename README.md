@@ -1,7 +1,8 @@
 # ACPaaS UI - Javacript Libraries
 
+[![acpaas-ui-js-build]][acpaas-ui-js-travis]
+
 **This documentation is work-in-progress!**
-[![Build Status](https://travis-ci.org/FabianMeul/acpaas-ui-js.svg?branch=master)](https://travis-ci.org/FabianMeul/acpaas-ui-js)
 
 ## Introduction
 
@@ -9,7 +10,7 @@ Antwerp City Platform as a Service User Interface (ACPaas UI) is a **component i
 
 ## Ecosystem
 
-This library is part of [ACPaaS UI]().
+This library is part of [ACPaaS UI][acpaas-ui].
 
 | Name              | Framework  | Status  |
 | ----------------- | ---------- | ------- |
@@ -64,20 +65,31 @@ Thank you to all the people who already contributed to ACPaaS UI!
 
 Copyright (c) 2016-present, Digipolis
 
+<!-- Generic Links -->
+[acpaas-ui]: https://acpaas-ui.digipolis.be
+
+<!-- Travis -->
+[acpaas-ui-js-build]: https://img.shields.io/travis/digipolisantwerp/acpaas-ui-js.svg
+[acpaas-ui-js-travis]: https://travis-ci.org/digipolisantwerp/acpaas-ui-js
+
+<!-- Github URL -->
 [acpaas-ui-schematics]: https://github.com/digipolisantwerp/acpaas-ui_schematics
 [acpaas-ui-js]: https://github.com/digipolisantwerp/acpaas-ui_js
 [acpaas-ui-angular]: https://github.com/digipolisantwerp/acpaas-ui_angular
 [acpaas-ui-react]: https://github.com/digipolisantwerp/acpaas-ui_react
 
+<!-- GitHub Version Badge -->
+[acpaas-ui-schematics-github]: https://img.shields.io/github/package-json/v/digipolisantwerp/acpaas-ui_schematics.svg
+[acpaas-ui-angular-github]: https://img.shields.io/github/package-json/v/digipolisantwerp/acpaas-ui_angular.svg
+[acpaas-ui-js-github]: https://img.shields.io/github/package-json/v/digipolisantwerp/acpaas-ui_js.svg
+
+<!-- NPM Package links -->
 [js-date-utils-package]: https://www.npmjs.com/package/@acpaas-ui/js-date-utils
 [js-eid-utils-package]: https://www.npmjs.com/package/@acpaas-ui/js-eid-utils
 [js-redux-utils-package]: https://www.npmjs.com/package/@acpaas-ui/js-redux-utils
 [js-notification-store-package]: https://www.npmjs.com/package/@acpaas-ui/js-notification-store
 
-[acpaas-ui-schematics-github]: https://img.shields.io/github/package-json/v/digipolisantwerp/acpaas-ui_schematics.svg
-[acpaas-ui-angular-github]: https://img.shields.io/github/package-json/v/digipolisantwerp/acpaas-ui_angular.svg
-[acpaas-ui-js-github]: https://img.shields.io/github/package-json/v/digipolisantwerp/acpaas-ui_js.svg
-
+<!-- NPM Version Badge -->
 [js-date-utils-status]: https://img.shields.io/npm/v/@acpaas-ui/js-date-utils.svg
 [js-eid-utils-status]: https://img.shields.io/npm/v/@acpaas-ui/js-eid-utils.svg
 [js-redux-utils-status]: https://img.shields.io/npm/v/@acpaas-ui/js-redux-utils.svg
