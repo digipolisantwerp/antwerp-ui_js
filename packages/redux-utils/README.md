@@ -33,7 +33,7 @@ There are 3 HORs available: `progress`, `basicType` and `target`. The usage of `
 
 The progress HOR wraps the state in an object detailing the status of your data:
 
-``` json
+``` javascript
 {
     loading: true/false,
     created: 'Thu Feb 15 2018 13:36:31 GMT+0100 (CET)',
@@ -47,7 +47,7 @@ The progress HOR wraps the state in an object detailing the status of your data:
 
 You can update the status by providing the `loading` flag or an `err` message in your action:
 
-``` json
+``` javascript
 {
     type: 'DO_STUFF',
     loading: true/false,
@@ -180,7 +180,7 @@ dispatch({
 The target reducer stores the result of the provided reducer for the provided target in the store.
 This way, you can reuse reducer logic and without having to manage an extra layer of complexity.
 
-``` json
+``` javascript
 {
     filters: {
         search: {...},
@@ -212,7 +212,7 @@ dispatch({
 
 The state will be updated accordingly:
 
-``` json
+``` javascript
 {
     filters: {
         search: [...]
@@ -243,7 +243,7 @@ dispatch({
 
 The state will be updated accordingly:
 
-``` json
+``` javascript
 {
     filters: {
         search: {
