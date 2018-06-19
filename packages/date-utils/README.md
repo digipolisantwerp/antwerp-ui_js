@@ -1,5 +1,7 @@
 # ACPaaS UI JS Date Utils
 
+[![js-date-utils-status]][js-date-utils-package]
+
 The `@acpaas-ui/js-date-utils` package provides some basic support for handling JS Date objects. Besides the `DateHelper` class, a `DateGenerator` class is included to generate weeks, months and date ranges from a Date Object.
 
 ## Installation
@@ -192,3 +194,7 @@ closestDateForRange(new Date('2017-05-12'), range);
     * `range (Array<number|Date>)`: a range of dates to parse, can be either a Date object or a number representing a weekday
     * `options (Object)`: the range options
         * `startOfWeek (number)`: the first day of the week
+
+
+[js-date-utils-package]: https://www.npmjs.com/package/@acpaas-ui/js-date-utils
+[js-date-utils-status]: https://img.shields.io/npm/v/@acpaas-ui/js-date-utils.svg

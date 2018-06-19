@@ -1,5 +1,7 @@
 # Eid module
 
+[![js-eid-utils-status]][js-eid-utils-package]
+
 ## EidMiddleware
 
 EidMiddleware module wrapper for Dios EidMiddleware
@@ -274,3 +276,7 @@ All error codes are listed below.
 | 2100 | Wrong pin, 2 tries left. |
 | 2101 | Wrong pin, 1 try left. |
 | 2102 | Wrong pin, card blocked. |
+
+
+[js-eid-utils-package]: https://www.npmjs.com/package/@acpaas-ui/js-eid-utils
+[js-eid-utils-status]: https://img.shields.io/npm/v/@acpaas-ui/js-eid-utils.svg

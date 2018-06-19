@@ -1,4 +1,7 @@
 # ACPaaS UI JS Redux Utils
+
+[![js-redux-utils-status]][js-redux-utils-package]
+
 The Redux Utils package provides some helpers and bootstrap utils to ease the redux setup.
 
 ## Installation
@@ -30,7 +33,7 @@ There are 3 HORs available: `progress`, `basicType` and `target`. The usage of `
 
 The progress HOR wraps the state in an object detailing the status of your data:
 
-```
+``` json
 {
     loading: true/false,
     created: 'Thu Feb 15 2018 13:36:31 GMT+0100 (CET)',
@@ -44,7 +47,7 @@ The progress HOR wraps the state in an object detailing the status of your data:
 
 You can update the status by providing the `loading` flag or an `err` message in your action:
 
-```
+``` json
 {
     type: 'DO_STUFF',
     loading: true/false,
@@ -54,7 +57,7 @@ You can update the status by providing the `loading` flag or an `err` message in
 
 By wrapping your reducer, you maintain control over what is stored in the `result`, without having to bother with the loading state. You just have to provide a type and a reducer function:
 
-```
+``` javascript
 const myReducer = (state, action) => {
     if (action.type === 'STUFF_LOAD') {
         return {
@@ -95,7 +98,7 @@ To avoid a lot of *copy pasta* the `redux-utils` package provides a very basic H
 
 Simply provide a type (defaults to `BASIC_DEFAULT`) and an (optional) initial value:
 
-```
+``` javascript
 const newsReducer = basicType({
     type: 'NEWS'
 }, null);
@@ -103,7 +106,7 @@ const newsReducer = basicType({
 
 Now you can update the news type by dispatching actions using the type you provided as a namespace:
 
-```
+``` javascript
 dispatch({
     type: 'NEWS/LOAD',              // <TYPE>/LOAD
     data: {                         // will always look for a 'data' property
@@ -117,7 +120,7 @@ dispatch({
 
 By default the `basicType` HOR will assume you are handling a single item. If you need to handle arrays, set the `dataType` option to `list`:
 
-```
+``` javascript
 const newsReducer = basicType({
     type: 'NEWS',
     dataType: 'list',
@@ -126,7 +129,7 @@ const newsReducer = basicType({
 
 Now you can use the same `LOAD` action to set the state:
 
-```
+``` javascript
 dispatch({
     type: 'NEWS/LOAD',
     data: [{
@@ -138,7 +141,7 @@ dispatch({
 
 or use the `LOAD_MORE` action to append new items to the state:
 
-```
+``` javascript
 dispatch({
     type: 'NEWS/LOAD_MORE',
     data: [{
@@ -155,7 +158,7 @@ When you call the `LOAD_MORE` action on a `single` data type, the reducer will f
 
 You can use the `progress` HOR by setting `progress` to `true` in the settings:
 
-```
+``` javascript
 const newsReducer = basicType({
     type: 'NEWS',
     dataType: 'list',
@@ -165,7 +168,7 @@ const newsReducer = basicType({
 
 You can still dispatch `loading` and `error` states the same way:
 
-```
+``` javascript
 dispatch({
     type: 'NEWS/LOAD',
     loading: true,
@@ -177,7 +180,7 @@ dispatch({
 The target reducer stores the result of the provided reducer for the provided target in the store.
 This way, you can reuse reducer logic and without having to manage an extra layer of complexity.
 
-```
+``` json
 {
     filters: {
         search: {...},
@@ -189,7 +192,7 @@ This way, you can reuse reducer logic and without having to manage an extra laye
 
 The `targetReducer` expects a `type`, `reducer` and optional `initialState` to work:
 
-```
+``` javascript
 const filterReducer = targetReducer({ type: 'FILTERS' }, myFilterReducer, {});
 ```
 
@@ -199,7 +202,7 @@ The `type` will be the namespace verified with the action type.
 
 You can update targets by setting the `target` property on the dispatched action:
 
-```
+``` javascript
 dispatch({
     type: 'FILTERS/LOAD',
     target: 'search',
@@ -209,7 +212,7 @@ dispatch({
 
 The state will be updated accordingly:
 
-```
+``` json
 {
     filters: {
         search: [...]
@@ -221,7 +224,7 @@ The state will be updated accordingly:
 
 You can wrap your targets in a `progressReducer` by setting `progress` to `true` in the settings:
 
-```
+``` javascript
 const filterReducer = targetReducer({
     type: 'FILTERS',
     progress: true
@@ -230,7 +233,7 @@ const filterReducer = targetReducer({
 
 Now you can dispatch `loading` and `error` states the same as before:
 
-```
+``` javascript
 dispatch({
     type: 'FILTERS/LOAD',
     loading: true,
@@ -240,7 +243,7 @@ dispatch({
 
 The state will be updated accordingly:
 
-```
+``` json
 {
     filters: {
         search: {
@@ -252,3 +255,6 @@ The state will be updated accordingly:
     }
 }
 ```
+
+[js-redux-utils-package]: https://www.npmjs.com/package/@acpaas-ui/js-redux-utils
+[js-redux-utils-status]: https://img.shields.io/npm/v/@acpaas-ui/js-redux-utils.svg

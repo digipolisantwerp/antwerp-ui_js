@@ -1,4 +1,7 @@
 # Notification Store
+
+[![js-notification-store-status]][js-notification-store-package]
+
 The `aui-notification-store` provides a singleton store to save and easily access notifications throughout your app. You can load up a message map and trigger notifications by handle.
 On top of that, you can set targets to hold your notifications (e.g. popups, statusbar, forms). Notifications are returned as `BehaviorSubjects`, allowing you to subscribe to changes.
 
@@ -140,3 +143,7 @@ const notifications = store.notifications.getValue();
 * `getNotifications(target)`: return a flat object holding all notifications or the notifications for the provided target
 * `clearNotification(notification)`: clear a notification, needs a `Notification` instance
 * `clearTarget(target)`: clear all notifications for a target, target is required
+
+
+[js-notification-store-package]: https://www.npmjs.com/package/@acpaas-ui/js-notification-store
+[js-notification-store-status]: https://img.shields.io/npm/v/@acpaas-ui/js-notification-store.svg
