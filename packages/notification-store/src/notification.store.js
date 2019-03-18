@@ -1,4 +1,4 @@
-import { BehaviorSubject } from "rxjs/BehaviorSubject";
+import { BehaviorSubject } from "rxjs";
 import { Notification } from "./notification";
 import escapeStringRegExp from "escape-string-regexp";
 import { NOTIFICATION_STORE_DEFAULTS } from "./notification.conf";
