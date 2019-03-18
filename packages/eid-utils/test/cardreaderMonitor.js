@@ -4,7 +4,7 @@ import "babel-polyfill";
 import chai from "chai";
 import sinonChai from "sinon-chai";
 
-import CardReaderMonitor from "../src/CardReaderMonitor";
+import CardReaderMonitor from "../src/cardreaderMonitor";
 
 chai.use(sinonChai);
 
