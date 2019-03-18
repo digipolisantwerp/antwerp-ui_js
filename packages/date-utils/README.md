@@ -9,7 +9,7 @@ The `@acpaas-ui/js-date-utils` package provides some basic support for handling 
 
 **NPM**
 ```
-npm i -S @acpaas-ui/js-date-utils
+npm install @acpaas-ui/js-date-utils --save
 ```
 
 **Yarn**

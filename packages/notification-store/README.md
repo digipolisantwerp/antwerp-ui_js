@@ -10,7 +10,7 @@ On top of that, you can set targets to hold your notifications (e.g. popups, sta
 
 **NPM**
 ```
-npm i -S @acpaas-ui/js-notification-store
+npm install @acpaas-ui/js-notification-store --save
 ```
 
 **Yarn**
