@@ -9,12 +9,12 @@ On top of that, you can set targets to hold your notifications (e.g. popups, sta
 
 Install the package as a dependency:
 ```
-npm install aui-notification-store --save
+npm install @acpaas-ui/js-notification-store
 ```
 
 and simply import it where needed and create a new instance to start subscribing or launching new notifications:
 ```
-import NotificationStore from 'aui-notification-store';
+import { NotificationStore } from '@acpaas-ui/js-notification-store';
 
 const store = new NotificationStore({
     404: 'not found'
