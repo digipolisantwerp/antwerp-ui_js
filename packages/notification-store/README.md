@@ -1,20 +1,29 @@
-# Notification Store
+# ACPaaS UI JS Notification Store
 
 [![js-notification-store-status]][js-notification-store-package]
 
-The `aui-notification-store` provides a singleton store to save and easily access notifications throughout your app. You can load up a message map and trigger notifications by handle.
+The `@acpaas-ui/js-notification-store` package provides a singleton store to save and easily access notifications throughout your app. You can load up a message map and trigger notifications by handle.
 On top of that, you can set targets to hold your notifications (e.g. popups, statusbar, forms). Notifications are returned as `BehaviorSubjects`, allowing you to subscribe to changes.
 
 ## Installation
+---
 
-Install the package as a dependency:
+**NPM**
 ```
-npm install aui-notification-store --save
+npm install @acpaas-ui/js-notification-store --save
 ```
 
-and simply import it where needed and create a new instance to start subscribing or launching new notifications:
+**Yarn**
 ```
-import NotificationStore from 'aui-notification-store';
+yarn add @acpaas-ui/js-notification-store
+```
+
+## Import
+---
+
+```
+// ES2015
+import { NotificationStore } from '@acpaas-ui/js-notification-store';
 
 const store = new NotificationStore({
     404: 'not found'

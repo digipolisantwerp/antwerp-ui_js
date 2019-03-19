@@ -9,7 +9,7 @@ The Redux Utils package provides some helpers and bootstrap utils to ease the re
 
 **NPM**
 ```
-npm i -S @acpaas-ui/js-redux-utils
+npm install @acpaas-ui/js-redux-utils --save
 ```
 
 **Yarn**
