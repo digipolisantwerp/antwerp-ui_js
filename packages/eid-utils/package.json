@@ -4,7 +4,7 @@
     "fileName": "acpaas-ui-js-eid-utils",
     "moduleName": "EIDUtils"
   },
-  "version": "1.0.1-alpha.3",
+  "version": "1.0.1",
   "description": "",
   "main": "acpaas-ui-js-eid-utils.umd.js",
   "browser": "acpaas-ui-js-eid-utils.cjs.js",
