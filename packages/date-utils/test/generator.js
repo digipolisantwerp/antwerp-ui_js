@@ -76,7 +76,6 @@ describe("DateGenerator", () => {
 			expect(DateGenerator.generatePadding("test")).to.eql([]);
 			expect(DateGenerator.generatePadding(null)).to.eql([]);
 			expect(DateGenerator.generatePadding([])).to.eql([]);
-			expect(DateGenerator.generatePadding({})).to.eql([]);
 		});
 
 		it("returns an empty array if no options were provided", () => {
@@ -150,7 +149,6 @@ describe("DateGenerator", () => {
 			expect(DateGenerator.generateMonth()).to.eql([]);
 			expect(DateGenerator.generateMonth("test")).to.eql([]);
 			expect(DateGenerator.generateMonth([])).to.eql([]);
-			expect(DateGenerator.generateMonth({})).to.eql([]);
 			expect(DateGenerator.generateMonth(null)).to.eql([]);
 		});
 

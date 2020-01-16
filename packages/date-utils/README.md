@@ -45,7 +45,7 @@ const today = new Date('2017-10-03'); // this will always be the 3th October, 20
 
 ## DateHelper
 ### Available methods and properties
-* `parseDate(...args)`: parse the input to a date object, returns `null` for an invalid date
+* `parseDate(...args, format?)`: parse the input to a date object, returns `null` for an invalid date. Format is an optional strict formatting parameter, using momentjs formats.
 * `getWeekday(date, startOfWeek)`: return the weekday for the provided date, offset by the (optionally) provided startOfWeek param, returns `-1` for an invalid date
 * `getMonthLength(date)`: return the length of the month for the provided date, returns `-1` for an invalid date
 * `getFirstWeekdayOfMonth(date, startOfWeek)`: return the weekday for the first day of the month for the provided date, offset by the (optionally) provided startOfWeek param, returns `-1` for invalid dates
