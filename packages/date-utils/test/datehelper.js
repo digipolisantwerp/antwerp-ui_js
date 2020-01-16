@@ -20,7 +20,8 @@ const compareDates = (...args) => {
 };
 
 const sanityCheck = (method, expected) => {
-	const testValues = [undefined, "test", [], {}, null];
+	// An empty array or object is considered to be a virtual '0' time
+	const testValues = [undefined, "test", null];
 
 	testValues.forEach(value => {
 		expect(DateHelper[method](value)).to.equal(expected);
@@ -31,6 +32,21 @@ describe("DateHelper", () => {
 	describe("parseDate", () => {
 		it("should return null if an invalid date was provided", () => {
 			sanityCheck("parseDate", null);
+		});
+
+		it("should accept a format for a date", () => {
+			const date = DateHelper.parseDate("05-02-2019", "DD-MM-YYYY");
+			expect(date).not.to.be.null;
+		});
+
+		it("should return an error when parsing a date without month or year", () => {
+			const date = DateHelper.parseDate("05-", "dd-mm-YYYY");
+			expect(date).to.be.null;
+		});
+
+		it("should return an error when parsing a date without year", () => {
+			const date = DateHelper.parseDate("05-02", "dd-mm-YYYY");
+			expect(date).to.be.null;
 		});
 
 		it("should return a date object for the provided input", () => {
