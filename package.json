@@ -7,7 +7,7 @@
     "info": "lerna info && lerna list",
     "lint": "npm run lerna:extend -- lint",
     "test": "npm run lerna:extend -- test",
-    "deploy": "npm run build && lerna bootstrap && lerna publish",
+    "deploy": "lerna bootstrap && lerna publish",
     "build": "lerna exec \"npm run build\""
   },
   "repository": {
