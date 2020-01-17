@@ -14,10 +14,6 @@
   "directories": {
     "test": "test"
   },
-  "files": [
-    "./dist",
-    "./src/acpaas-ui-js-eid-utils.d.ts"
-  ],
   "scripts": {
     "rollup": "rollup -c --extend",
     "********************** TEST **********************": "",

@@ -11,10 +11,6 @@
   "module": "./dist/acpaas-ui-js-date-utils.es.js",
   "es2015": "./dist/acpaas-ui-js-date-utils.es.js",
   "typings": "./src/acpaas-ui-js-date-utils.d.ts",
-  "files": [
-    "./dist",
-    "./src/acpaas-ui-js-date-utils.d.ts"
-  ],
   "directories": {
     "test": "test"
   },

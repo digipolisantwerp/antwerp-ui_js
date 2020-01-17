@@ -11,10 +11,6 @@
   "module": "./dist/acpaas-ui-js-notification-store.es.js",
   "es2015": "./dist/acpaas-ui-js-notification-store.es.js",
   "typings": "./src/acpaas-ui-js-notification-store.d.ts",
-  "files": [
-    "./dist",
-    "./src/acpaas-ui-js-notification-store.d.ts"
-  ],
   "keywords": [
     "acpaas-ui",
     "aui",
