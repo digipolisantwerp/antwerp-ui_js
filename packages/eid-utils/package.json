@@ -4,7 +4,7 @@
     "fileName": "acpaas-ui-js-eid-utils",
     "moduleName": "EIDUtils"
   },
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "",
   "main": "acpaas-ui-js-eid-utils.umd.js",
   "browser": "acpaas-ui-js-eid-utils.cjs.js",
@@ -28,7 +28,8 @@
     "copy:packageJson": "node ../../scripts/package.js eid-utils",
     "copy:readme": "copy \"README.md\" dist/",
     "clean": "rimraf dist",
-    "build": "npm run clean && npm run rollup && npm run copy"
+    "build": "npm run clean && npm run rollup && npm run copy",
+    "prepublish": "npm run build"
   },
   "author": "",
   "license": "ISC",

@@ -4,7 +4,7 @@
     "fileName": "acpaas-ui-js-date-utils",
     "moduleName": "JsDateUtils"
   },
-  "version": "1.0.4",
+  "version": "1.0.2",
   "description": "",
   "main": "acpaas-ui-js-date-utils.umd.js",
   "browser": "acpaas-ui-js-date-utils.cjs.js",
@@ -28,7 +28,8 @@
     "copy:packageJson": "node ../../scripts/package.js date-utils",
     "copy:readme": "copy \"README.md\" dist/",
     "clean": "rimraf dist",
-    "build": "npm run clean && npm run rollup && npm run copy"
+    "build": "npm run clean && npm run rollup && npm run copy",
+    "prepublish": "npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -54,5 +55,6 @@
   },
   "dependencies": {
     "moment": "^2.24.0"
-  }
+  },
+  "gitHead": "2c2f2f09c19c90da5547f01a71dbbee42d2bfed3"
 }
