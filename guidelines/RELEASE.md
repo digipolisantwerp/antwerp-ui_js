@@ -26,11 +26,11 @@ Exceptions:
 
 2. **Version**
 
-   Version the project using NPM commands; `npm version (patch | minor | major)`. This takes care of setting git tags.
+   Version the library (situated in the directory 'packages') using NPM commands; `npm version (patch | minor | major)`. This takes care of setting git tags.
 
 3. **Publish**
 
-   Publish the project using NPM commands; `npm publish`.
+   In the root directory, publish the project using NPM command `npm publish`.
 
 ### Hotfixes
 
