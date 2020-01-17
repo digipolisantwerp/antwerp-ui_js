@@ -26,7 +26,7 @@ Exceptions:
 
 3. **Publish**
 
-   In the root directory, publish the project using NPM command `npm publish`. Lerna will take care of setting new library versions.
+   In the root directory, publish the project using NPM command `npm run deploy`. Lerna will take care of setting new library versions.
 
 ### Hotfixes
 

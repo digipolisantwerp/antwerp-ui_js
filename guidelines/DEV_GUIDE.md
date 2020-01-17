@@ -18,7 +18,7 @@ Some useful commands:
 * `npm run lint`: run the linter on the entire library
 * `npm test`: run the unit tests for the entire library
 * `npm run build`: build the entire library (see below)
-* `npm publish`: deploy all changes following [lernas update policy](https://github.com/lerna/lerna#publish)
+* `npm run deploy`: deploy all changes following [lernas update policy](https://github.com/lerna/lerna#publish)
 
 ## Package vs Library
 
