@@ -4,13 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bootstrap": "./node_modules/.bin/lerna bootstrap",
-    "lerna": "./node_modules/.bin/lerna",
-    "lerna:extend": "node ./scripts/lerna-extend.js",
+    "info": "lerna info && lerna list",
     "lint": "npm run lerna:extend -- lint",
     "test": "npm run lerna:extend -- test",
-    "build": "npm run lerna:extend -- build",
-    "deploy": "npm run lerna -- publish --skip-npm"
+    "deploy": "lerna bootstrap && lerna publish",
+    "build": "lerna exec \"npm run build\""
   },
   "repository": {
     "type": "git",
@@ -36,9 +34,10 @@
     "command-line-args": "^5.0.2",
     "eslint": "^4.19.1",
     "husky": "^1.0.0-rc.8",
-    "lerna": "^2.11.0",
+    "lerna": "3.20.2",
     "lodash.camelcase": "4.3.0",
     "lodash.capitalize": "4.2.1",
+    "rimraf": "3.0.0",
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-uglify": "^3.0.0",
     "uglify-es": "^3.3.9"
