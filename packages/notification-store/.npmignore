@@ -1,5 +1,6 @@
 test
-src
 node_modules
-package-lock.json
 rollup.config.js
+.eslingignore
+.babelrc
+package-lock.json
