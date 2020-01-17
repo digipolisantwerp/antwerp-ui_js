@@ -12,7 +12,6 @@
   "es2015": "acpaas-ui-js-redux-utils.es.js",
   "typings": "acpaas-ui-js-redux-utils.d.ts",
   "scripts": {
-    "postversion": "npm run build && npm run copy && cd dist && npm publish --access public",
     "rollup": "./node_modules/.bin/rollup -c --extend",
     "********************** TEST **********************": "",
     "lint": "./node_modules/.bin/eslint .",
@@ -26,8 +25,8 @@
     "copy:packageJson": "node ../../scripts/package.js date-utils",
     "copy:readme": "copy \"README.md\" dist/",
     "clean": "rimraf dist",
-    "build": "npm run clean && npm run rollup",
-    "link": "npm run build && npm run copy && cd dist && npm link"
+    "build": "npm run clean && npm run rollup && npm run copy",
+    "prepublishOnly": "npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -46,7 +45,7 @@
     "eslint": "^4.19.1",
     "eslint-plugin-chai-friendly": "^0.4.1",
     "mocha": "^5.1.1",
-    "rimraf": "^2.6.2",
+    "rimraf": "^2.7.1",
     "rollup": "^0.58.2",
     "sinon": "^5.0.7",
     "sinon-chai": "^3.0.0"

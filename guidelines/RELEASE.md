@@ -24,13 +24,9 @@ Exceptions:
 
    The maintainers list the PR's that are merged after the last release and determine the severity of the changes (PATCH - MINOR - MAJOR) according to [Semantic Versioning](https://semver.org/). They make sure that the Changelog is properly updated.
 
-2. **Version**
-
-   Version the project using NPM commands; `npm version (patch | minor | major)`. This takes care of setting git tags.
-
 3. **Publish**
 
-   Publish the project using NPM commands; `npm publish`.
+   In the root directory, publish the project using NPM command `npm publish`. Lerna will take care of setting new library versions.
 
 ### Hotfixes
 

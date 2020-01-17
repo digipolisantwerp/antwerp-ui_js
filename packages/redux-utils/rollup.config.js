@@ -2,7 +2,7 @@ const packageJson = require("./package.json");
 const dependencies = packageJson.dependencies;
 const rollupProps = packageJson.$rollup;
 
-const rollupHelpers = require("../../rollup.helpers");
+const rollupHelpers = require("../../helpers/rollup.helpers");
 
 export default {
 	input: "src/index.js",
