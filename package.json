@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "info": "lerna info && lerna list",
-    "lint": "npm run lerna:extend -- lint",
-    "test": "npm run lerna:extend -- test",
+    "lint": "lerna exec \"npm run lint\"",
+    "test": "lerna exec \"npm run test\"",
     "deploy": "lerna bootstrap && lerna publish",
     "build": "lerna exec \"npm run build\""
   },
@@ -18,9 +18,6 @@
   "license": "ISC",
   "homepage": "https://github.com/FabianMeul/acpaas-ui-js#readme",
   "devDependencies": {
-    "@commitlint/cli": "^7.0.0",
-    "@commitlint/config-angular": "^7.0.1",
-    "@studiohyperdrive/eslint-config": "^3.0.2",
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "6.22.0",
     "babel-plugin-istanbul": "^4.1.6",
