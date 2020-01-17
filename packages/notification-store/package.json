@@ -4,7 +4,7 @@
     "fileName": "acpaas-ui-js-notification-store",
     "moduleName": "JsNotificationStore"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The Notification Store provides a singleton store to save and easily access notifications throughout your app.",
   "main": "acpaas-ui-js-notification-store.umd.js",
   "browser": "acpaas-ui-js-notification-store.cjs.js",
