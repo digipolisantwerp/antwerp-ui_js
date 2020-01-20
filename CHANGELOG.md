@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 
 ## Unreleased
+- Fixed faulty typing
 
 
 ## [1.0.5] - 2020-01-20
