@@ -40,7 +40,7 @@ describe("DateHelper", () => {
 		});
 
 		it("should return an error when parsing a date without month or year", () => {
-			const date = DateHelper.parseDate("05-", "DD-DD-YYYY", true);
+			const date = DateHelper.parseDate("05-", "DD-MM-YYYY", true);
 			expect(date).to.be.null;
 		});
 
