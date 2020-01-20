@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## Unreleased
 
+### Fixed
+- Take into account UTC timezone to prevent hour offset error
 
 ## [1.0.4] - 2020-01-17
 - Fixed an issue with date parsing
