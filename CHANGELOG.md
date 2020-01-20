@@ -6,11 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 
 ## Unreleased
-### Fixed
-- Typings fix
+- Fixed faulty typing
+
 
 ## [1.0.5] - 2020-01-20
-- Take into account UTC timezone to prevent hour offset error
+- Fixed UTC timezone not taken into account to prevent hour offset error
+
 
 ## [1.0.4] - 2020-01-17
 - Fixed an issue with date parsing
@@ -30,7 +31,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/digipolisantwerp/acpaas-ui_js/compare/v1.0.4...HEAD
+[Unreleased]: https://github.com/digipolisantwerp/acpaas-ui_js/compare/v1.0.5...HEAD
+[1.0.5]: https://github.com/digipolisantwerp/acpaas-ui_js/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/digipolisantwerp/acpaas-ui_js/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/digipolisantwerp/acpaas-ui_js/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/digipolisantwerp/acpaas-ui_js/compare/v1.0.1...v1.0.2
