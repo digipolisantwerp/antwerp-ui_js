@@ -59,6 +59,10 @@ Thank you to all the people who already contributed to ACPaaS UI!
 - [Slack]()
 - [Blog]()
 
+## Support
+
+Jasper Van Proeyen (<jasper.vanproeyen@digipolis.be>)
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
