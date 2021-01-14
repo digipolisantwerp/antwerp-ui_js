@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Bootstrap
-        run: lerna bootstrap --force-local && lerna link --force-local
+        run: npx lerna bootstrap
       - name: Run linter
         run: npm run lint
       - name: Run tests
