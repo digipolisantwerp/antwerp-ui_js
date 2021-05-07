@@ -1,6 +1,7 @@
-const moment = require("moment");
+import { parse } from "date-fns";
+import { zonedTimeToUtc } from "date-fns-tz";
 
-export default (d, format = null, strict = false) => {
+export default (d, format = null) => {
 	if (d === undefined || d === null || d instanceof Array) {
 		return null;
 	}
@@ -9,7 +10,9 @@ export default (d, format = null, strict = false) => {
 		return isNaN(d.valueOf()) ? null : d;
 	}
 
-	const date = format ? moment.utc(d, format, strict) : moment.utc(d);
+	const date = format
+		? parse(d, format, new Date())
+		: new Date(d);
 
-	return date.isValid() ? date.toDate() : null;
+	return isNaN(date.getTime()) ? null : zonedTimeToUtc(date, "UTC");
 };
