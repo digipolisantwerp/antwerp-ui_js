@@ -39,13 +39,21 @@ describe("DateHelper", () => {
 			expect(date).not.to.be.null;
 		});
 
+		it("should return an error when parsing a false date", () => {
+			const dateFalse = DateHelper.parseDate(false);
+			expect(dateFalse).to.be.null;
+
+			const dateNill = DateHelper.parseDate(0);
+			expect(dateNill).to.be.null;
+		});
+
 		it("should return an error when parsing a date without month or year", () => {
-			const date = DateHelper.parseDate("05-", "dd-MM-yyyy", true);
+			const date = DateHelper.parseDate("05-", "dd-MM-yyyy");
 			expect(date).to.be.null;
 		});
 
 		it("should return an error when parsing a date without year", () => {
-			const date = DateHelper.parseDate("05-02", "dd-MM-yyyy", true);
+			const date = DateHelper.parseDate("05-02", "dd-MM-yyyy");
 			expect(date).to.be.null;
 		});
 

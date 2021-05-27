@@ -12,7 +12,7 @@ export default (d, format = null) => {
 
 	const date = format
 		? parse(d, format, new Date())
-		: new Date(d);
+		: parse(d, "", new Date());
 
 	return isNaN(date.getTime()) ? null : zonedTimeToUtc(date, "UTC");
 };

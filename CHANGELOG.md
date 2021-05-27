@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## Unreleased
 
 
+## [2.0.0] - 2021-05-27
+- [BREAKING] Replaced moment.js with date-fns. Date format now uses Unicode Tokens. For more info [go here](https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md).
+
+
 ## [1.0.6] - 2020-01-20
 - Fixed faulty typing
 
