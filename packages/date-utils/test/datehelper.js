@@ -35,22 +35,30 @@ describe("DateHelper", () => {
 		});
 
 		it("should accept a format for a date", () => {
-			const date = DateHelper.parseDate("05-02-2019", "DD-MM-YYYY");
+			const date = DateHelper.parseDate("05-02-2019", "dd-MM-yyyy");
 			expect(date).not.to.be.null;
 		});
 
+		it("should return an error when parsing a false date", () => {
+			const dateFalse = DateHelper.parseDate(false);
+			expect(dateFalse).to.be.null;
+
+			const dateNill = DateHelper.parseDate(0);
+			expect(dateNill).to.be.null;
+		});
+
 		it("should return an error when parsing a date without month or year", () => {
-			const date = DateHelper.parseDate("05-", "DD-MM-YYYY", true);
+			const date = DateHelper.parseDate("05-", "dd-MM-yyyy");
 			expect(date).to.be.null;
 		});
 
 		it("should return an error when parsing a date without year", () => {
-			const date = DateHelper.parseDate("05-02", "DD-MM-YYYY", true);
+			const date = DateHelper.parseDate("05-02", "dd-MM-yyyy");
 			expect(date).to.be.null;
 		});
 
 		it("should return a date object for the provided input", () => {
-			const result = DateHelper.parseDate("2017-10-3", "YYYY-MM-DD");
+			const result = DateHelper.parseDate("2017-10-3", "yyyy-MM-dd");
 
 			expect(result instanceof Date).to.be.true;
 		});
