@@ -39,6 +39,12 @@ describe("DateHelper", () => {
 			expect(date).not.to.be.null;
 		});
 
+		it("should try to parse a correct date when no format has been given", () => {
+			const date = DateHelper.parseDate("2019-02-05");
+			expect(date).not.to.be.null;
+			expect(date instanceof Date).to.be.true;
+		});
+
 		it("should return an error when parsing a false date", () => {
 			const dateFalse = DateHelper.parseDate(false);
 			expect(dateFalse).to.be.null;

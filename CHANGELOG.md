@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## Unreleased
 
 
+## [2.0.1] - 2021-05-31
+- Fixed an issue where a date without given format would parse as null.
+
+
 ## [2.0.0] - 2021-05-27
 - [BREAKING] Replaced moment.js with date-fns. Date format now uses Unicode Tokens. For more info [go here](https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md).
 
@@ -38,7 +42,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/digipolisantwerp/acpaas-ui_js/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/digipolisantwerp/acpaas-ui_js/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/digipolisantwerp/acpaas-ui_js/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/digipolisantwerp/acpaas-ui_js/compare/v1.0.6...v2.0.0
 [1.0.6]: https://github.com/digipolisantwerp/acpaas-ui_js/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/digipolisantwerp/acpaas-ui_js/compare/v1.0.4...v1.0.5
