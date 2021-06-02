@@ -1,28 +1,28 @@
-# ACPaaS UI - Javacript Libraries
+# Antwerp UI - Javacript Libraries
 
-[![acpaas-ui-js-build]][acpaas-ui-js-travis]
+![build][antwerp-ui-js-ci]
 
 **This documentation is work-in-progress!**
 
 ## Introduction
 
-Antwerp City Platform as a Service User Interface (ACPaas UI) is a **component interface library** for building user interfaces and responsive web apps. It's designed to provide developers with functionality en UI/UX patterns that matches the Antwerpen styleguide. This part of the library provides vanilla javascript utilities.
+Antwerp City Platform as a Service User Interface (Antwerp UI) is a **component interface library** for building user interfaces and responsive web apps. It's designed to provide developers with functionality en UI/UX patterns that matches the Antwerpen styleguide. This part of the library provides vanilla javascript utilities.
 
 ## Ecosystem
 
-This library is part of [ACPaaS UI][acpaas-ui].
+This library is part of [Antwerp UI][antwerp-ui].
 
 | Name              | Framework  | Status  |
 | ----------------- | ---------- | ------- |
-| Schematics        | ES5+       | [![acpaas-ui-schematics-github]][acpaas-ui-schematics] |
-| Javascript        | ES5+       | [![acpaas-ui-js-github]][acpaas-ui-js] |
-| Angular           | Angular 6+ | [![acpaas-ui-angular-github]][acpaas-ui-angular] |
-| React             | React 16+  | [acpaas-ui-react] |
+| Schematics        | ES5+       | [![antwerp-ui-schematics-github]][antwerp-ui-schematics] |
+| Javascript        | ES5+       | [![antwerp-ui-js-github]][antwerp-ui-js] |
+| Angular           | Angular 6+ | [![antwerp-ui-angular-github]][antwerp-ui-angular] |
+| React             | React 16+  | [antwerp-ui-react] |
 | VueJS             | TBA        | TBA  |
 
 ## Documentation
 
-To check out [live examples]() and docs, visit [acpaas-ui.digipolis.be/ui-components](https://acpaas-ui.digipolis.be/ui-components).
+To check out [live examples]() and docs, visit [antwerp-ui.digipolis.be/ui-components](https://antwerp-ui.digipolis.be/ui-components).
 
 ## Library Contents
 
@@ -49,7 +49,7 @@ Detailed changes for each release are documented in the [changelog](./CHANGELOG.
 
 Please make sure to read the [Contributing Guide]() before making a pull request.
 
-Thank you to all the people who already contributed to ACPaaS UI!
+Thank you to all the people who already contributed to Antwerp UI!
 
 **List of contributors here**
 
@@ -70,25 +70,24 @@ Jasper Van Proeyen (<jasper.vanproeyen@digipolis.be>)
 Copyright (c) 2016-present, Digipolis
 
 <!-- Generic Links -->
-[acpaas-ui]: https://acpaas-ui.digipolis.be
+[antwerp-ui]: https://antwerp-ui.digipolis.be
 
 <!-- StackOverflow -->
-[stackoverflow-issues]: https://stackoverflow.com/questions/tagged/acpaas-ui
+[stackoverflow-issues]: https://stackoverflow.com/questions/tagged/antwerp-ui
 
-<!-- Travis -->
-[acpaas-ui-js-build]: https://img.shields.io/travis/digipolisantwerp/acpaas-ui-js.svg
-[acpaas-ui-js-travis]: https://travis-ci.org/digipolisantwerp/acpaas-ui-js
+<!-- GitHub actions -->
+[antwerp-ui-js-ci]: https://github.com/digipolisantwerp/antwerp-ui_js/workflows/CI/badge.svg
 
 <!-- Github URL -->
-[acpaas-ui-schematics]: https://github.com/digipolisantwerp/acpaas-ui_schematics
-[acpaas-ui-js]: https://github.com/digipolisantwerp/acpaas-ui_js
-[acpaas-ui-angular]: https://github.com/digipolisantwerp/acpaas-ui_angular
-[acpaas-ui-react]: https://github.com/digipolisantwerp/acpaas-ui_react
+[antwerp-ui-schematics]: https://github.com/digipolisantwerp/antwerp-ui_schematics
+[antwerp-ui-js]: https://github.com/digipolisantwerp/antwerp-ui_js
+[antwerp-ui-angular]: https://github.com/digipolisantwerp/antwerp-ui_angular
+[antwerp-ui-react]: https://github.com/digipolisantwerp/antwerp-ui_react
 
 <!-- GitHub Version Badge -->
-[acpaas-ui-schematics-github]: https://img.shields.io/github/package-json/v/digipolisantwerp/acpaas-ui_schematics.svg
-[acpaas-ui-angular-github]: https://img.shields.io/github/package-json/v/digipolisantwerp/acpaas-ui_angular.svg
-[acpaas-ui-js-github]: https://img.shields.io/github/package-json/v/digipolisantwerp/acpaas-ui_js.svg
+[antwerp-ui-schematics-github]: https://img.shields.io/github/package-json/v/digipolisantwerp/antwerp-ui_schematics.svg
+[antwerp-ui-angular-github]: https://img.shields.io/github/package-json/v/digipolisantwerp/antwerp-ui_angular.svg
+[antwerp-ui-js-github]: https://img.shields.io/github/package-json/v/digipolisantwerp/antwerp-ui_js.svg
 
 <!-- NPM Package links -->
 [js-date-utils-package]: https://www.npmjs.com/package/@acpaas-ui/js-date-utils

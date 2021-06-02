@@ -1,4 +1,4 @@
-# ACPaaS UI NGX - release guidelines
+# Antwerp UI NGX - release guidelines
 
 This package is supplied as a library.
 For now, we will not release separate components on NPM.

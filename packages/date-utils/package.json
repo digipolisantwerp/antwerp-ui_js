@@ -1,16 +1,16 @@
 {
   "name": "@acpaas-ui/js-date-utils",
   "$rollup": {
-    "fileName": "acpaas-ui-js-date-utils",
+    "fileName": "antwerp-ui-js-date-utils",
     "moduleName": "JsDateUtils"
   },
   "version": "2.0.1",
   "description": "",
-  "main": "./dist/acpaas-ui-js-date-utils.umd.js",
-  "browser": "./dist/acpaas-ui-js-date-utils.cjs.js",
-  "module": "./dist/acpaas-ui-js-date-utils.es.js",
-  "es2015": "./dist/acpaas-ui-js-date-utils.es.js",
-  "typings": "./src/acpaas-ui-js-date-utils.d.ts",
+  "main": "./dist/antwerp-ui-js-date-utils.umd.js",
+  "browser": "./dist/antwerp-ui-js-date-utils.cjs.js",
+  "module": "./dist/antwerp-ui-js-date-utils.es.js",
+  "es2015": "./dist/antwerp-ui-js-date-utils.es.js",
+  "typings": "./src/antwerp-ui-js-date-utils.d.ts",
   "directories": {
     "test": "test"
   },
