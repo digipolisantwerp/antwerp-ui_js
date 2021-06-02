@@ -1,4 +1,4 @@
-# ACPaaS UI JS Date Utils
+# Antwerp UI JS Date Utils
 
 [![js-date-utils-status]][js-date-utils-package]
 

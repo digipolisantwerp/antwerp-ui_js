@@ -1,4 +1,4 @@
-# ACPaaS UI JS Notification Store
+# Antwerp UI JS Notification Store
 
 [![js-notification-store-status]][js-notification-store-package]
 

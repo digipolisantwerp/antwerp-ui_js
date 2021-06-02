@@ -1,6 +1,6 @@
 {
   "name": "@acpaas-ui/js-libs",
-  "version": "1.0.4",
+  "version": "2.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,11 +13,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FabianMeul/acpaas-ui-js.git"
+    "url": "git+https://github.com/digipolisantwerp/antwerp-ui_js.git"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/FabianMeul/acpaas-ui-js#readme",
+  "homepage": "https://github.com/digipolisantwerp/antwerp-ui_js#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "6.22.0",

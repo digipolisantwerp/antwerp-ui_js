@@ -1,8 +1,8 @@
-# ACPaaS UI dev guide
+# Antwerp UI dev guide
 
 ## Available commands
 
-Since the ACPaaS UI library was created using `lerna`, all lerna commands are available to use during development. You can use a global install (make sure to check the supported version in the root `package.json` file) or the local copy installed in the dev dependencies:
+Since the Antwerp UI library was created using `lerna`, all lerna commands are available to use during development. You can use a global install (make sure to check the supported version in the root `package.json` file) or the local copy installed in the dev dependencies:
 
 ```bash
 lerna
@@ -40,5 +40,5 @@ If you have a dependency between 2 packages, you can use the same import paths a
 import { DateHelper } from '@acpaas-ui/js-date-utils';
 ```
 
-Lerna will resolve all `acpaas-ui` paths for you, as long as you have run the `bootstrap` command after adding a new package.
+Lerna will resolve all `antwerp-ui` paths for you, as long as you have run the `bootstrap` command after adding a new package.
 We discourage creating dependencies between the different libraries in this repo, since they are supposed to be self contained tools to be used independent from other packages.

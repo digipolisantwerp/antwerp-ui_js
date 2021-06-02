@@ -1,4 +1,4 @@
-# ACPaaS UI JS Redux Utils
+# Antwerp UI JS Redux Utils
 
 [![js-redux-utils-status]][js-redux-utils-package]
 

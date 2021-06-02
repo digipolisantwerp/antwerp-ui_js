@@ -1,18 +1,18 @@
 {
   "name": "@acpaas-ui/js-notification-store",
   "$rollup": {
-    "fileName": "acpaas-ui-js-notification-store",
+    "fileName": "antwerp-ui-js-notification-store",
     "moduleName": "JsNotificationStore"
   },
   "version": "1.0.4",
   "description": "The Notification Store provides a singleton store to save and easily access notifications throughout your app.",
-  "main": "./dist/acpaas-ui-js-notification-store.umd.js",
-  "browser": "./dist/acpaas-ui-js-notification-store.cjs.js",
-  "module": "./dist/acpaas-ui-js-notification-store.es.js",
-  "es2015": "./dist/acpaas-ui-js-notification-store.es.js",
-  "typings": "./src/acpaas-ui-js-notification-store.d.ts",
+  "main": "./dist/antwerp-ui-js-notification-store.umd.js",
+  "browser": "./dist/antwerp-ui-js-notification-store.cjs.js",
+  "module": "./dist/antwerp-ui-js-notification-store.es.js",
+  "es2015": "./dist/antwerp-ui-js-notification-store.es.js",
+  "typings": "./src/antwerp-ui-js-notification-store.d.ts",
   "keywords": [
-    "acpaas-ui",
+    "antwerp-ui",
     "aui",
     "es2015",
     "typescript"
