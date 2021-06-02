@@ -1,6 +1,6 @@
 # Antwerp UI - Javacript Libraries
 
-[![antwerp-ui-js-build]][antwerp-ui-js-travis]
+![build][antwerp-ui-js-ci]
 
 **This documentation is work-in-progress!**
 
@@ -75,9 +75,8 @@ Copyright (c) 2016-present, Digipolis
 <!-- StackOverflow -->
 [stackoverflow-issues]: https://stackoverflow.com/questions/tagged/antwerp-ui
 
-<!-- Travis -->
-[antwerp-ui-js-build]: https://img.shields.io/travis/digipolisantwerp/antwerp-ui-js.svg
-[antwerp-ui-js-travis]: https://travis-ci.org/digipolisantwerp/antwerp-ui-js
+<!-- GitHub actions -->
+[antwerp-ui-js-ci]: https://github.com/digipolisantwerp/antwerp-ui_js/workflows/CI/badge.svg
 
 <!-- Github URL -->
 [antwerp-ui-schematics]: https://github.com/digipolisantwerp/antwerp-ui_schematics
