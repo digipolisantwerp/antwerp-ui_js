@@ -1,6 +1,0 @@
-test
-node_modules
-rollup.config.js
-.eslingignore
-.babelrc
-package-lock.json

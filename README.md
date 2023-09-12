@@ -29,7 +29,6 @@ To check out [live examples]() and docs, visit [acpaas-ui.digipolis.be/ui-compon
 | Name              | Description                              | Status | URL                                                      |
 | ----------------- | ---------------------------------------- | ------ |--------------------------------------------------------- |
 | DateUtils         | Utilities for dates, such as formatting. | [![js-date-utils-status]][js-date-utils-package]   |[Documentation](./packages/date-utils/README.md)  |
-| EIDUtils          | EidMiddleware module wrapper for Dios EidMiddleware | [![js-eid-utils-status]][js-eid-utils-package]   |[Documentation](./packages/eid-utils/README.md)  |
 | ReduxUtils        | Utilities for Redux                      | [![js-redux-utils-status]][js-redux-utils-package] |[Documentation](./packages/redux-utils/README.md) |
 | NotificationStore | Redux store for notifications            | [![js-notification-store-status]][js-notification-store-package] |[Documentation](./packages/notification-store/README.md) |
 
@@ -92,12 +91,10 @@ Copyright (c) 2016-present, Digipolis
 
 <!-- NPM Package links -->
 [js-date-utils-package]: https://www.npmjs.com/package/@acpaas-ui/js-date-utils
-[js-eid-utils-package]: https://www.npmjs.com/package/@acpaas-ui/js-eid-utils
 [js-redux-utils-package]: https://www.npmjs.com/package/@acpaas-ui/js-redux-utils
 [js-notification-store-package]: https://www.npmjs.com/package/@acpaas-ui/js-notification-store
 
 <!-- NPM Version Badge -->
 [js-date-utils-status]: https://img.shields.io/npm/v/@acpaas-ui/js-date-utils.svg
-[js-eid-utils-status]: https://img.shields.io/npm/v/@acpaas-ui/js-eid-utils.svg
 [js-redux-utils-status]: https://img.shields.io/npm/v/@acpaas-ui/js-redux-utils.svg
 [js-notification-store-status]: https://img.shields.io/npm/v/@acpaas-ui/js-notification-store.svg
